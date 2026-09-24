@@ -173,9 +173,6 @@ p{margin:0}
 .day .n{margin-top:auto; font-family:var(--guj); font-weight:700; font-size:1.25rem; line-height:1.4; color:var(--a,var(--gold2))}
 .day .e{font-size:.92rem; line-height:1.3; padding-bottom:12px}
 .day .ny{position:absolute; right:10px; top:12px; font-size:.7rem; font-weight:600; background:rgba(255,255,255,.14); padding:3px 8px; border-radius:999px}
-.yrline{grid-column:1/-1; display:flex; align-items:center; gap:12px; font-size:.85rem; color:var(--golddk)}
-.yrline::before,.yrline::after{content:""; flex:1; height:1px; background:rgba(156,107,31,.4)}
-@media (min-width:760px){ .yrline{display:none} }
 
 /* ================= CHAPTERS ================= */
 .ch{position:relative; background:var(--bg); color:var(--fg,var(--ivory)); overflow:hidden}
@@ -385,7 +382,6 @@ footer .tag{margin-top:22px; font-style:italic; font-size:1.2rem; color:var(--go
         <a class="day" href="#mehndi" style="--c:#0B4A34" data-k="green"><span class="d">29</span><span class="m">Tuesday, December 2026</span><span class="n" lang="gu">મહેંદી</span><span class="e">Mehndi, 5 pm</span></a>
         <a class="day" href="#puja" style="--c:#9E4705" data-k="kesar"><span class="d">30</span><span class="m">Wednesday, December 2026</span><span class="n" lang="gu">ગ્રહશાંતિ</span><span class="e">Grahshanti, morning</span></a>
         <a class="day" href="#garba" style="--c:#140B33;--a:#FF8CC2" data-k="night"><span class="d">31</span><span class="m">Thursday, December 2026</span><span class="n" lang="gu">રાસ ગરબા</span><span class="e">Garba night, 6 pm</span></a>
-        <p class="yrline">A new year, a new beginning</p>
         <a class="day" href="#lagna" style="--c:#6E0A1C" data-k="red"><span class="ny">2027</span><span class="d">01</span><span class="m">Friday, January 2027</span><span class="n" lang="gu">શુભ લગ્ન</span><span class="e">Wedding, 6 pm</span></a>
       </nav>
     </div>
@@ -411,9 +407,6 @@ footer .tag{margin-top:22px; font-style:italic; font-size:1.2rem; color:var(--go
         <fieldset class="set"><legend>Will you be there?</legend>
           <div class="chips"><label class="chip"><input type="radio" name="come" value="yes" checked><span>Yes, with joy</span></label><label class="chip"><input type="radio" name="come" value="no"><span>Sorry, we can't</span></label></div>
         </fieldset>
-        <fieldset class="set"><legend>You're family or friend of</legend>
-          <div class="chips"><label class="chip"><input type="radio" name="side" value="bride" checked><span>Ayushi</span></label><label class="chip" style="--cc:#0B4A34"><input type="radio" name="side" value="groom"><span>Valay</span></label></div>
-        </fieldset>
         <div class="fld if-come"><span>How many of you?</span>
           <div class="stepper"><button type="button" id="cMinus" aria-label="One fewer">−</button><output id="rCount" aria-live="polite">2</output><button type="button" id="cPlus" aria-label="One more">+</button></div>
         </div>
@@ -424,9 +417,6 @@ footer .tag{margin-top:22px; font-style:italic; font-size:1.2rem; color:var(--go
             <label class="chip" style="--cc:#140B33"><input type="checkbox" name="ev" value="Garba night" checked><span>Garba, 31 Dec</span></label>
             <label class="chip"><input type="checkbox" name="ev" value="Wedding" checked><span>Wedding, 1 Jan</span></label>
           </div>
-        </fieldset>
-        <fieldset class="set if-come"><legend>Food preference</legend>
-          <div class="chips"><label class="chip"><input type="radio" name="food" value="Regular" checked><span>Regular</span></label><label class="chip"><input type="radio" name="food" value="Jain"><span>Jain</span></label><label class="chip"><input type="radio" name="food" value="Swaminarayan"><span>Swaminarayan</span></label></div>
         </fieldset>
         <label class="fld"><span>Your blessing for Ayushi and Valay (optional)</span><textarea id="rMsg" rows="3"></textarea></label>
         <p class="err" id="rErr" role="alert"></p>
@@ -466,16 +456,22 @@ footer .tag{margin-top:22px; font-style:italic; font-size:1.2rem; color:var(--go
 'use strict';
 /* =====================================================================
    EDIT DETAILS HERE
-   Venues: add the address in quotes and a map button appears.
-   WhatsApp: add numbers with country code, e.g. '919812345678'.
-   If a number is left empty, WhatsApp opens and the guest picks who to send to.
+   Venues: name is shown on the page and in the calendar event,
+   map is the Google Maps pin the "Open in Maps" button opens.
+   WhatsApp: add the number with country code, e.g. '919812345678'.
+   If it is left empty, WhatsApp opens and the guest picks who to send to.
    ===================================================================== */
 const C = {
   couple: 'Ayushi and Valay',
   weddingISO: '2027-01-01T18:00:00+05:30',
   newYearISO: '2027-01-01T00:00:00+05:30',
-  rsvp: { bride: '', groom: '' },
-  venue: { mehndi: '', puja: '', garba: '', lagna: '' }
+  rsvp: { phone: '' },
+  venue: {
+    mehndi: { name: "Ayushi's House",               map: 'https://maps.app.goo.gl/S6ZJoTJa2FFHXJGw7' },
+    puja:   { name: "Ayushi's House",               map: 'https://maps.app.goo.gl/S6ZJoTJa2FFHXJGw7' },
+    garba:  { name: 'Hari Mandap, Anand',           map: 'https://share.google/9Lt3q0XBzffvpTqkn' },
+    lagna:  { name: 'Kamuba Party Plot, Ahmedabad', map: 'https://maps.app.goo.gl/zQgNx1N9QxxsHN4N7' }
+  }
 };
 const EV = [
   { id: 'mehndi', no: 'I', gu: 'મહેંદી', en: 'Mehndi', pal: 'green', motif: 'parrot',
@@ -993,7 +989,7 @@ const Hero = (() => {
    ===================================================================== */
 function calUrl(e, venue) {
   const f = iso => new Date(iso).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
-  return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(e.en + ', ' + C.couple + "'s wedding") + '&dates=' + f(e.start) + '/' + f(e.end) + (venue ? '&location=' + encodeURIComponent(venue) : '') + '&details=' + encodeURIComponent('Shubh lagna of ' + C.couple);
+  return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(e.en + ', ' + C.couple + "'s wedding") + '&dates=' + f(e.start) + '/' + f(e.end) + (venue && venue.name ? '&location=' + encodeURIComponent(venue.name) : '') + '&details=' + encodeURIComponent('Shubh lagna of ' + C.couple + (venue && venue.map ? '\nLocation: ' + venue.map : ''));
 }
 const IC_CAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>';
 const IC_PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>';
@@ -1009,8 +1005,8 @@ function buildChapters() {
         <h2 id="h-${e.id}"><span class="gu" lang="gu">${e.gu}</span><span class="en">${e.en}</span></h2>
         <p class="ch-lede">${e.lede}</p>
         <div class="when"><span class="dd">${e.dd}</span><span class="mm">${e.mm}<b>${e.wk}</b></span></div>
-        <p class="venue">${venue ? venue : 'Venue details will be shared soon'}</p>
-        <div class="acts"><a class="btn line" href="${calUrl(e, venue)}" target="_blank" rel="noopener">${IC_CAL}Add to calendar</a>${venue ? `<a class="btn line" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue)}" target="_blank" rel="noopener">${IC_PIN}Directions</a>` : ''}</div>
+        <p class="venue">${venue && venue.name ? venue.name : 'Venue details will be shared soon'}</p>
+        <div class="acts"><a class="btn line" href="${calUrl(e, venue)}" target="_blank" rel="noopener">${IC_CAL}Add to calendar</a>${venue && (venue.map || venue.name) ? `<a class="btn line" href="${venue.map || 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(venue.name)}" target="_blank" rel="noopener">${IC_PIN}Open in Maps</a>` : ''}</div>
         ${extra}
       </header>
       <div class="ch-body">
@@ -1090,13 +1086,13 @@ function buildRsvp() {
   const val = nm => { const x = f.querySelector(`input[name="${nm}"]:checked`); return x ? x.value : ''; };
   function text() {
     const yes = val('come') === 'yes', evs = $$('input[name="ev"]:checked', f).map(x => x.value), m = $('#rMsg').value.trim();
-    const L = [`🙏 Jai Mataji! RSVP for ${C.couple}'s wedding`, `Name: ${name.value.trim()}`, `Family or friend of: ${val('side') === 'groom' ? 'Valay' : 'Ayushi'}`];
-    if (yes) L.push(`Coming: Yes, ${n} ${n === 1 ? 'person' : 'people'}`, `Celebrations: ${evs.length ? evs.join(', ') : 'Not sure yet'}`, `Food: ${val('food')}`);
+    const L = [`🙏 Jai Mataji! RSVP for ${C.couple}'s wedding`, `Name: ${name.value.trim()}`];
+    if (yes) L.push(`Coming: Yes, ${n} ${n === 1 ? 'person' : 'people'}`, `Celebrations: ${evs.length ? evs.join(', ') : 'Not sure yet'}`);
     else L.push("Coming: Sorry, we can't make it. Our blessings are with you.");
     if (m) L.push(`Blessing: ${m}`);
     return L.join('\n');
   }
-  function url() { const ph = C.rsvp[val('side') === 'groom' ? 'groom' : 'bride']; return (ph ? 'https://wa.me/' + ph : 'https://wa.me/') + '?text=' + encodeURIComponent(text()); }
+  function url() { const ph = C.rsvp.phone; return (ph ? 'https://wa.me/' + ph : 'https://wa.me/') + '?text=' + encodeURIComponent(text()); }
   function refresh() { const no = val('come') === 'no'; f.classList.toggle('nocome', no); send.href = url(); $('#rSendT').textContent = no ? 'Send my blessings on WhatsApp' : 'Send RSVP on WhatsApp'; }
   f.addEventListener('input', refresh); f.addEventListener('change', refresh); f.addEventListener('submit', e => e.preventDefault());
   $('#cMinus').addEventListener('click', () => { n = Math.max(1, n - 1); $('#rCount').textContent = n; refresh(); });
