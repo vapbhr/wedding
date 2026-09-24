@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ayushi &amp; Valay | Shubh Lagna</title>
+<meta name="description" content="The wedding of Ayushi and Valay, 29 December 2026 to 1 January 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@100..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kumkum:#6E0A1C; --kumkum2:#8E1022; --emerald:#0B4A34; --kesar:#A64C06; --night:#140B33; --rani:#D6246E;
+  --gold:#E3B75A; --gold2:#F6E3A1; --golddk:#9C6B1F; --ivory:#F7EFDF; --paper:#FBF4E6; --ink:#35090F;
+  --lat:'Bodoni Moda','Noto Serif Gujarati','Bodoni 72','Didot',Georgia,serif;
+  --guj:'Noto Serif Gujarati','Bodoni Moda','Shruti',Georgia,serif;
+  --foil:linear-gradient(100deg,#9C6B1F 0%,#E3B75A 16%,#FFF1BF 30%,#D9A441 44%,#8F5E17 58%,#E9C46A 74%,#FFF4CC 88%,#B8862B 100%);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --ivory:#F7EFDF; } }
+:root[data-theme="dark"]{ --ivory:#F7EFDF; }
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{background:var(--kumkum); scroll-behavior:smooth; scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0; background:var(--kumkum); color:var(--ivory); font-family:var(--lat); font-optical-sizing:auto; font-size:1.0625rem; line-height:1.6; overflow-x:clip; -webkit-font-smoothing:antialiased; -webkit-tap-highlight-color:transparent; font-variant-numeric:lining-nums}
+body.locked{overflow:hidden; height:100%}
+img,svg,canvas{max-width:100%}
+a{color:inherit}
+button{font:inherit; color:inherit; cursor:pointer}
+p{margin:0}
+.gu,[lang="gu"]{font-family:var(--guj)}
+:focus-visible{outline:2px solid var(--gold2); outline-offset:3px; border-radius:6px}
+.sr{position:absolute!important; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+.wrap{width:min(1180px,100% - 40px); margin-inline:auto; position:relative}
+.narrow{width:min(760px,100% - 40px)}
+.foil{background:var(--foil); background-size:220% 100%; -webkit-background-clip:text; background-clip:text; color:transparent; animation:foil 8s ease-in-out infinite alternate}
+@keyframes foil{from{background-position:0% 0}to{background-position:100% 0}}
+
+/* buttons */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:14px 26px; border-radius:999px; font-family:var(--lat); font-size:1rem; font-weight:600; letter-spacing:.01em; text-decoration:none; border:0; transition:transform .25s,background-position .6s,box-shadow .25s}
+.btn svg{width:18px; height:18px; flex:none}
+.btn.gold{color:#3A1206; background:linear-gradient(100deg,#B8862B,#F6E3A1 35%,#D9A441 58%,#FFF1BF 78%,#B8862B); background-size:220% 100%; box-shadow:0 12px 28px -14px rgba(233,174,42,.9),inset 0 1px 0 rgba(255,255,255,.6)}
+.btn.gold:hover{background-position:100% 0; transform:translateY(-2px)}
+.btn.line{color:var(--gold2); box-shadow:inset 0 0 0 1px rgba(227,183,90,.65); background:transparent}
+.btn.line:hover{box-shadow:inset 0 0 0 1px var(--gold2)}
+.btn.ink{color:var(--paper); background:var(--ink)}
+
+/* patola kinar band */
+.kinar{height:clamp(30px,5.4vw,46px); background-image:var(--k); background-repeat:repeat-x; background-size:auto 100%; position:relative; z-index:2}
+
+/* ================= HAVELI DOORS INTRO ================= */
+.sprite{position:absolute; width:0; height:0; overflow:hidden}
+#intro{position:fixed; inset:0; z-index:100; background:#1F0208; overflow:hidden; perspective:2200px; perspective-origin:50% 46%}
+#intro.open{background:transparent; transition:background .35s .25s}
+#intro.gone{opacity:0; transition:opacity .6s; pointer-events:none}
+.velvet{background-color:#4A0714; background-repeat:repeat,repeat,no-repeat; background-size:72px 108px,180px 180px,100% 100%}
+.door{position:absolute; top:0; bottom:0; width:50%; overflow:hidden; transition:transform 2.1s cubic-bezier(.6,0,.16,1); will-change:transform}
+.door.l{left:0; transform-origin:0 50%; background-image:var(--jaal),var(--noise),radial-gradient(150% 78% at 100% 50%,#9C1731 0%,#680C20 30%,#3E0512 64%,#1F0208 100%); background-position:right center,0 0,0 0}
+.door.r{right:0; transform-origin:100% 50%; background-image:var(--jaal),var(--noise),radial-gradient(150% 78% at 0% 50%,#9C1731 0%,#680C20 30%,#3E0512 64%,#1F0208 100%); background-position:left center,0 0,0 0}
+.door::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(0,0,0,.15),rgba(0,0,0,.8)); opacity:0; transition:opacity 2.1s; pointer-events:none}
+.door.r::after{background:linear-gradient(270deg,rgba(0,0,0,.15),rgba(0,0,0,.8))}
+#intro.open .door.l{transform:rotateY(100deg)}
+#intro.open .door.r{transform:rotateY(-100deg)}
+#intro.open .door::after{opacity:1}
+.dsvg,.idecor{position:absolute; inset:0; width:100%; height:100%; display:block}
+.idecor{pointer-events:none; z-index:2}
+.glow{position:absolute; left:50%; top:52%; width:min(130vw,1200px); aspect-ratio:1; transform:translate(-50%,-50%); pointer-events:none; z-index:1; background:radial-gradient(closest-side,rgba(255,196,110,.30),rgba(255,150,60,.08) 55%,transparent)}
+#intro.open .glow,#intro.open .idecor{opacity:0; transition:opacity .8s .35s}
+.mand{transform-box:fill-box; transform-origin:center; opacity:0; transform:scale(.9) rotate(-8deg); animation:mandIn 1.8s .1s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes mandIn{to{opacity:1; transform:none}}
+.tor{transform:translateY(-140px); animation:torIn 1.2s .25s cubic-bezier(.3,1.3,.5,1) forwards}
+@keyframes torIn{to{transform:none}}
+.ladi{transform:translateY(calc(var(--len) * -1 - 40px)); animation:ladiIn 1.5s var(--d,.5s) cubic-bezier(.3,1.25,.55,1) forwards}
+@keyframes ladiIn{to{transform:none}}
+.diyas{opacity:0; animation:fadeIn 1s .9s forwards}
+@keyframes fadeIn{to{opacity:1}}
+.flame .fl{transform-box:fill-box; transform-origin:50% 100%; animation:flick 1.7s ease-in-out infinite alternate}
+.flame .gl{animation:glo 2.3s ease-in-out infinite alternate}
+@keyframes flick{0%{transform:none}35%{transform:scale(.93,1.07) skewX(2deg)}70%{transform:scale(1.05,.95) skewX(-2deg)}100%{transform:scale(.97,1.03) skewX(1deg)}}
+@keyframes glo{from{opacity:.7}to{opacity:1}}
+
+.lcard{position:absolute; left:50%; top:50%; z-index:3; container-type:inline-size; width:min(372px,88vw,calc((100svh - 36px) * .72)); aspect-ratio:360/500; transform:translate(-50%,-46%); opacity:0; pointer-events:none; color:var(--ink); text-align:center; transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.lcard .arch{position:absolute; inset:0; width:100%; height:100%; overflow:visible; filter:drop-shadow(0 34px 34px rgba(0,0,0,.55)) drop-shadow(0 0 1px rgba(90,40,0,.5))}
+.lc-in{position:absolute; left:11%; right:11%; top:11.5%; bottom:9%; display:flex; flex-direction:column; align-items:center; justify-content:center}
+#intro.ready .lcard{opacity:1; transform:translate(-50%,-50%); pointer-events:auto}
+#intro.open .lcard{opacity:0; transform:translate(-50%,-50%) scale(.94); pointer-events:none; transition-duration:.5s}
+.lcard .lg{width:max(34px,12cqw); height:auto; display:block}
+.lcard .orn{display:block; width:62%; height:auto; margin:3.2cqw auto 1.4cqw}
+.lcard .l1{margin-top:2.2cqw; color:var(--kumkum2); font-weight:600; font-size:max(11.5px,3.9cqw); line-height:1.5}
+.lcard .l2{font-weight:700; font-size:max(18px,7.4cqw); color:var(--kumkum2); line-height:1.35; margin-top:.4cqw}
+.lcard .l3{font-style:italic; font-weight:500; font-size:max(32px,14cqw); line-height:1.02; display:flex; flex-direction:column; align-items:center}
+.lcard .l3 span{font-size:.5em; color:var(--golddk); line-height:1.1}
+.lcard .l4{margin-top:3cqw; font-size:max(12px,4.1cqw); line-height:1.4; text-wrap:balance}
+.lcard .btn{margin-top:auto; flex-direction:column; gap:0; line-height:1.25; padding:max(10px,3.2cqw) max(22px,8cqw); font-size:max(14px,4.5cqw)}
+.lcard .btn small{font-size:.78em; font-weight:500; opacity:.8}
+
+/* ================= HERO ================= */
+#home{position:relative; min-height:100svh; display:grid; grid-template-rows:auto 1fr; overflow:hidden;
+  background:radial-gradient(700px circle at var(--mx,30%) var(--my,35%),rgba(255,170,140,.14),transparent 60%),linear-gradient(160deg,#7E0C21,#5E0818 58%,#43050F)}
+.zari{position:relative; height:clamp(78px,10.5vh,96px); overflow:hidden; background-color:transparent}
+.zari svg{position:absolute; inset:0; width:100%; height:100%; display:block}
+.zari .tor{animation:none; transform:none}
+.zari.in .tor{transform:translateY(-110px); animation:torIn 1.2s .15s cubic-bezier(.3,1.3,.5,1) forwards}
+.zari.in .ladi{transform:translateY(calc(var(--len) * -1 - 40px)); animation:ladiIn 1.5s var(--d,.5s) cubic-bezier(.3,1.25,.55,1) forwards}
+.zari .ladi{animation:none; transform:none}
+.zari .mand{animation:none; opacity:1; transform:none}
+.hero-in{position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:26px 22px 112px}
+.gmark{width:44px; height:44px}
+.blz{margin-top:8px; font-family:var(--guj); font-weight:600; font-size:.95rem; color:var(--gold2); line-height:1.7}
+.blz span{display:block; font-weight:500; font-size:.85rem; opacity:.9}
+.shubh{margin-top:18px; font-family:var(--guj); font-weight:700; font-size:clamp(1.3rem,5vw,1.7rem); color:var(--gold2); letter-spacing:.04em}
+.names{margin:.1em 0 0; font-weight:500; font-style:italic; line-height:.92; display:flex; flex-direction:column; align-items:center}
+.names .n{font-size:clamp(4.6rem,23vw,10.5rem); letter-spacing:-.015em; padding:0 .06em .08em}
+.names .amp{font-size:clamp(1.8rem,7vw,3.2rem); color:var(--gold); font-weight:400; margin:-.05em 0 .02em}
+.meaning{margin-top:18px; max-width:32ch; font-size:1.05rem; line-height:1.5; opacity:.92}
+.meaning em{color:var(--gold2)}
+.range{margin-top:22px; display:flex; align-items:center; gap:14px; font-size:1.02rem; letter-spacing:.02em}
+.range i{display:block; width:34px; height:1px; background:var(--gold)}
+.range b{font-weight:600}
+.cd{display:flex; gap:0; margin-top:22px}
+.cd div{padding:0 clamp(12px,3.4vw,22px); text-align:center; border-left:1px solid rgba(227,183,90,.45)}
+.cd div:first-child{border-left:0}
+.cd b{display:block; font-weight:400; font-size:clamp(2rem,8.4vw,3rem); line-height:1; color:var(--gold2); font-variant-numeric:lining-nums tabular-nums}
+.cd span{display:block; margin-top:6px; font-size:.74rem; line-height:1.25; opacity:.8}
+.ctas{display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:28px}
+@media (min-width:960px){
+  #home{grid-template-rows:none; grid-template-columns:1fr 40%}
+  .zari{order:2; height:auto; background-color:#4A0714; background-image:var(--jaal),var(--noise),radial-gradient(120% 70% at 50% 56%,#90142B 0%,#600A1D 38%,#38040F 76%,#1F0208 100%); background-position:center,0 0,0 0}
+  .zari::before{content:""; position:absolute; left:0; top:0; bottom:0; width:14px; z-index:1; background:linear-gradient(90deg,rgba(0,0,0,.5),transparent)}
+  .zari::after{content:""; position:absolute; inset:0; background:linear-gradient(110deg,transparent 40%,rgba(255,236,190,.12) 50%,transparent 60%) -100% 0/250% 100% no-repeat; animation:sheen 8s ease-in-out infinite; pointer-events:none}
+  @keyframes sheen{0%{background-position:-120% 0}60%,100%{background-position:220% 0}}
+  .hero-in{align-items:flex-start; text-align:left; padding:8vh 5vw 120px 8vw}
+  .names{align-items:flex-start}
+  .names .amp{margin-left:.4em}
+  .ctas{justify-content:flex-start}
+  .names .n{font-size:clamp(6rem,10vw,10rem)}
+}
+
+/* ================= IVORY SECTIONS ================= */
+.ivory{background:var(--ivory); color:var(--ink)}
+#nimantran{padding:clamp(64px,10vw,120px) 0 clamp(60px,9vw,110px)}
+.saying{text-align:center; max-width:640px; margin:0 auto}
+.saying .sg{font-family:var(--guj); font-weight:700; font-size:clamp(1.9rem,7.6vw,3.3rem); line-height:1.45; color:var(--kumkum2)}
+.saying .se{margin-top:14px; font-style:italic; font-size:clamp(1.05rem,3.8vw,1.25rem); line-height:1.55}
+.saying .se small{display:block; margin-top:6px; font-style:normal; font-size:.9rem; opacity:.75}
+.kank{position:relative; margin:clamp(40px,7vw,70px) auto 0; max-width:640px; background:var(--paper); border-radius:4px; overflow:hidden;
+  box-shadow:0 40px 80px -40px rgba(80,20,10,.55),0 0 0 1px rgba(156,107,31,.35)}
+.kank .kinar{height:30px}
+.kank-in{padding:clamp(26px,6vw,48px) clamp(20px,6vw,54px) clamp(30px,6vw,50px); text-align:center; position:relative}
+.kank-in::before{content:""; position:absolute; inset:14px; border:1px solid rgba(156,107,31,.35); pointer-events:none}
+.lang{display:inline-flex; padding:4px; border-radius:999px; background:#F1E4CB; margin-bottom:22px; position:relative; z-index:1}
+.lang button{border:0; background:none; padding:7px 16px; border-radius:999px; font-size:.92rem; font-weight:600; color:var(--ink); opacity:.65}
+.lang button[aria-pressed="true"]{background:var(--kumkum2); color:var(--paper); opacity:1}
+.kg{width:62px; height:62px; margin:0 auto 6px; display:block}
+.kt .k-hd{font-weight:600; color:var(--kumkum2); font-size:.98rem}
+.kt .k-kd{margin-top:14px; font-size:1.05rem; line-height:1.7}
+.kt .k-nm{margin-top:18px; font-style:italic; font-weight:500; font-size:clamp(2.4rem,10vw,3.6rem); line-height:1.1; color:var(--kumkum2)}
+.kt[lang="gu"] .k-nm{font-style:normal; font-weight:700; font-size:clamp(2rem,8.6vw,3rem); line-height:1.35}
+.kt .k-nm small{font-size:.45em; font-weight:600; color:var(--golddk); margin-right:.2em; vertical-align:.35em}
+.kt .k-par{margin-top:6px; font-size:.98rem; line-height:1.6; opacity:.85; max-width:40ch; margin-inline:auto}
+.kt .k-join{margin-top:16px; font-style:italic; color:var(--golddk); font-size:1.1rem}
+.kt .k-inv{margin-top:22px; font-size:1.05rem; line-height:1.7; max-width:44ch; margin-inline:auto}
+.kt .k-li{margin-top:22px; font-weight:700; color:var(--kumkum2); font-size:1.15rem}
+.days{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:clamp(46px,8vw,80px) auto 0; max-width:900px}
+@media (min-width:760px){ .days{grid-template-columns:repeat(4,1fr)} }
+.day{position:relative; display:flex; flex-direction:column; padding:18px 16px 16px; border-radius:4px; background:var(--c); color:var(--ivory); text-decoration:none; overflow:hidden; min-height:190px; transition:transform .3s}
+.day:hover{transform:translateY(-4px)}
+.day::after{content:""; position:absolute; left:0; right:0; bottom:0; height:12px; background-image:var(--k); background-size:auto 100%; background-repeat:repeat-x}
+.day .d{font-size:3.4rem; line-height:.9; font-weight:500; color:var(--a,var(--gold2))}
+.day .m{font-size:.85rem; margin-top:4px; opacity:.85}
+.day .n{margin-top:auto; font-family:var(--guj); font-weight:700; font-size:1.25rem; line-height:1.4; color:var(--a,var(--gold2))}
+.day .e{font-size:.92rem; line-height:1.3; padding-bottom:12px}
+.day .ny{position:absolute; right:10px; top:12px; font-size:.7rem; font-weight:600; background:rgba(255,255,255,.14); padding:3px 8px; border-radius:999px}
+.yrline{grid-column:1/-1; display:flex; align-items:center; gap:12px; font-size:.85rem; color:var(--golddk)}
+.yrline::before,.yrline::after{content:""; flex:1; height:1px; background:rgba(156,107,31,.4)}
+@media (min-width:760px){ .yrline{display:none} }
+
+/* ================= CHAPTERS ================= */
+.ch{position:relative; background:var(--bg); color:var(--fg,var(--ivory)); overflow:hidden}
+.ch-in{position:relative; z-index:1; display:grid; gap:44px; padding:clamp(60px,10vw,120px) 0 clamp(70px,10vw,120px)}
+@media (min-width:960px){ .ch-in{grid-template-columns:5fr 6fr; gap:6vw; align-items:start} .ch-hd{position:sticky; top:10vh} }
+.ch-no{font-style:italic; font-weight:400; font-size:clamp(4.6rem,18vw,9rem); line-height:.8; color:transparent; -webkit-text-stroke:1px var(--ac); opacity:.75}
+.ch-hd h2{margin:10px 0 0; font-weight:400}
+.ch-hd h2 .gu{display:block; font-weight:700; font-size:clamp(2.7rem,12vw,5rem); line-height:1.3; color:var(--ac)}
+.ch-hd h2 .en{display:block; font-style:italic; font-size:clamp(1.4rem,5vw,2rem); line-height:1.2}
+.ch-lede{margin-top:14px; max-width:36ch; font-size:1.1rem; line-height:1.55; opacity:.94}
+.when{display:flex; align-items:center; gap:18px; margin-top:26px; padding:18px 0; border-top:1px solid rgba(255,255,255,.22); border-bottom:1px solid rgba(255,255,255,.22)}
+.when .dd{font-size:clamp(4.2rem,17vw,6.2rem); line-height:.82; font-weight:500; color:var(--ac)}
+.when .mm{font-size:1.05rem; line-height:1.4}
+.when .mm b{display:block; font-weight:600}
+.venue{margin-top:14px; font-style:italic; opacity:.9}
+.ch .acts{margin-top:18px; display:flex; gap:10px; flex-wrap:wrap}
+.ch .btn.line{color:var(--fg,var(--ivory)); box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ac) 70%,transparent)}
+figure.fig{margin:0}
+.swatch{width:min(330px,84%); margin:0 auto; padding:18px; background-image:var(--latimg); background-size:auto; border-radius:3px; box-shadow:0 34px 60px -30px rgba(0,0,0,.85)}
+.sw-in{background:var(--paper); padding:14px; box-shadow:inset 0 0 0 1px rgba(156,107,31,.55),inset 0 0 0 5px var(--paper),inset 0 0 0 6px rgba(156,107,31,.35)}
+.motif{display:block; width:100%; height:auto}
+.motif .mr{opacity:0; transform:translateX(-2px)}
+.swatch.on .motif .mr{animation:mr .45s ease-out forwards; animation-delay:calc(var(--i) * 45ms)}
+@keyframes mr{to{opacity:1; transform:none}}
+figure.fig figcaption{margin:14px auto 0; max-width:34ch; text-align:center; font-style:italic; font-size:.95rem; opacity:.88}
+.rt{margin:44px 0 18px; font-weight:400; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+.rt .gu{font-weight:700; font-size:1.5rem; color:var(--ac)}
+.rt .en{font-style:italic; font-size:1.1rem; opacity:.9}
+.rites{list-style:none; margin:0; padding:0; display:grid; gap:20px; position:relative}
+.rites li{display:grid; grid-template-columns:30px 1fr; gap:14px}
+.rites .mk{width:11px; height:11px; margin-top:.7em; justify-self:center; transform:rotate(45deg); background:var(--ac)}
+.rites .rg{font-family:var(--guj); font-weight:700; font-size:1.3rem; line-height:1.4; color:var(--ac)}
+.rites .re{font-style:italic; font-size:1rem; line-height:1.3}
+.rites .rd{margin-top:4px; font-size:.98rem; line-height:1.5; opacity:.88; max-width:44ch}
+.rites.seq .mk{width:30px; height:30px; margin-top:.1em; transform:none; border-radius:50%; background:var(--bg); box-shadow:inset 0 0 0 1px var(--ac); display:grid; place-items:center; font-size:.82rem; color:var(--ac); position:relative; z-index:1}
+.rites.seq::before{content:""; position:absolute; left:14.5px; top:16px; bottom:16px; width:1px; background:color-mix(in srgb,var(--ac) 30%,transparent)}
+.rites.seq::after{content:""; position:absolute; left:14px; top:16px; width:2px; height:calc((100% - 32px) * var(--p,0)); background:var(--ac); box-shadow:0 0 10px var(--ac)}
+.rites.seq li.done .mk{background:var(--ac); color:var(--bg)}
+
+#mehndi{--bg:#0B4A34; --ac:#F2C45A; background:radial-gradient(800px circle at 90% 10%,rgba(80,200,120,.16),transparent 60%),#0B4A34}
+#puja{--bg:#9E4705; --ac:#FFE08A; background:radial-gradient(800px circle at 10% 10%,rgba(255,210,120,.2),transparent 60%),#9E4705}
+#garba{--bg:#140B33; --ac:#FF8CC2; background:radial-gradient(900px circle at 50% 0%,#2C1766,transparent 70%),#140B33}
+#lagna{--bg:#6E0A1C; --ac:#F2C45A; background:linear-gradient(rgba(242,196,90,.1) 1px,transparent 1px) 0 0/68px 68px,linear-gradient(90deg,rgba(242,196,90,.1) 1px,transparent 1px) 0 0/68px 68px,radial-gradient(circle,rgba(255,230,160,.18) 2px,transparent 2.6px) 34px 34px/68px 68px,#6E0A1C}
+#fw{position:absolute; inset:0; width:100%; height:100%; z-index:0; pointer-events:none}
+.ny{margin-top:16px; display:inline-flex; flex-wrap:wrap; align-items:baseline; gap:8px; padding:10px 16px; border-radius:999px; background:rgba(255,140,194,.12); box-shadow:inset 0 0 0 1px rgba(255,140,194,.4)}
+.ny b{font-weight:500; color:var(--ac); font-variant-numeric:tabular-nums lining-nums}
+.fw-hint{margin-top:10px; font-size:.9rem; font-style:italic; opacity:.75}
+
+/* ================= RSVP ================= */
+#rsvp{padding:clamp(64px,10vw,110px) 0 clamp(70px,10vw,110px)}
+.sh{text-align:center; margin-bottom:34px}
+.sh h2{margin:0; font-weight:400}
+.sh .gu{display:block; font-weight:700; font-size:clamp(2.3rem,10vw,4rem); line-height:1.35; color:var(--kumkum2)}
+.sh .en{display:block; font-style:italic; font-size:clamp(1.3rem,4.6vw,1.7rem)}
+.sh p{margin-top:8px; opacity:.8}
+.rcard{position:relative; background:var(--paper); border-radius:4px; padding:clamp(24px,5vw,40px); box-shadow:0 40px 80px -40px rgba(80,20,10,.5),0 0 0 1px rgba(156,107,31,.35); overflow:hidden}
+.fld{display:block; margin-bottom:20px}
+.fld>span,.set legend{display:block; font-weight:600; margin-bottom:8px; padding:0; font-size:1rem}
+.set{border:0; margin:0 0 20px; padding:0; min-width:0}
+input[type=text],textarea{width:100%; font:inherit; color:var(--ink); background:#fff; border:0; border-radius:10px; padding:12px 14px; box-shadow:inset 0 0 0 1px rgba(53,9,15,.25)}
+input[type=text]:focus,textarea:focus{outline:none; box-shadow:inset 0 0 0 2px var(--kumkum2)}
+textarea{resize:vertical; min-height:84px}
+.chips{display:flex; flex-wrap:wrap; gap:8px}
+.chip{position:relative}
+.chip input{position:absolute; opacity:0; inset:0; margin:0; cursor:pointer}
+.chip span{display:inline-flex; align-items:center; padding:9px 16px; border-radius:999px; background:#fff; box-shadow:inset 0 0 0 1px rgba(53,9,15,.25); font-weight:500; transition:background .2s,color .2s}
+.chip input:checked+span{background:var(--cc,var(--kumkum2)); color:var(--paper); box-shadow:none}
+.chip input:focus-visible+span{outline:2px solid var(--kumkum2); outline-offset:2px}
+.stepper{display:inline-flex; align-items:center; gap:6px; background:#fff; border-radius:999px; padding:4px; box-shadow:inset 0 0 0 1px rgba(53,9,15,.25)}
+.stepper button{width:40px; height:40px; border-radius:50%; border:0; background:var(--kumkum2); color:var(--paper); font-size:1.3rem; line-height:1}
+.stepper output{min-width:44px; text-align:center; font-size:1.4rem; font-weight:500}
+.err{color:#A3122C; font-weight:600; min-height:1.5em; margin:-6px 0 10px}
+.send{width:100%}
+.nocome .if-come{display:none}
+.stamp{position:absolute; right:18px; top:18px; width:92px; height:92px; pointer-events:none; opacity:0; transform:scale(2.2) rotate(-18deg)}
+.stamp.on{animation:stamp .55s cubic-bezier(.3,1.5,.5,1) forwards}
+@keyframes stamp{to{opacity:.92; transform:scale(1) rotate(-12deg)}}
+.done{text-align:center; margin-top:18px}
+.done h3{margin:0; font-family:var(--guj); font-weight:700; font-size:2rem; color:var(--kumkum2)}
+.done p{max-width:40ch; margin:6px auto 0}
+.done .acts{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:16px}
+
+/* ================= FOOTER ================= */
+footer{background:linear-gradient(160deg,#6E0A1C,#43050F); text-align:center; padding:0 0 140px}
+footer .fin{padding:60px 20px 0}
+footer .li{font-family:var(--guj); font-weight:700; color:var(--gold2); font-size:1.2rem}
+footer .fam{font-family:var(--guj); font-weight:700; font-size:clamp(2.4rem,10vw,3.6rem); line-height:1.35}
+footer .fe{font-style:italic; opacity:.85}
+footer .tag{margin-top:22px; font-style:italic; font-size:1.2rem; color:var(--gold2)}
+
+/* ================= NAV + FX ================= */
+#nav{position:fixed; left:50%; bottom:calc(14px + env(safe-area-inset-bottom,0px)); z-index:80; transform:translate(-50%,160%); display:flex; align-items:center; gap:2px; padding:6px; border-radius:999px;
+  background:rgba(24,8,12,.74); -webkit-backdrop-filter:blur(14px) saturate(1.4); backdrop-filter:blur(14px) saturate(1.4); box-shadow:0 0 0 1px rgba(227,183,90,.4),0 18px 40px -14px rgba(0,0,0,.8); transition:transform .8s cubic-bezier(.3,1.3,.5,1)}
+#nav.show{transform:translate(-50%,0)}
+#nav a,#nav button{min-width:40px; height:40px; padding:0 9px; display:grid; place-items:center; border-radius:999px; color:var(--ivory); text-decoration:none; font-style:italic; font-size:1rem; opacity:.72; background:none; border:0; transition:opacity .2s,background .2s}
+#nav .on{opacity:1; background:rgba(227,183,90,.2); color:var(--gold2)}
+#nav .mono{font-size:1.08rem; font-weight:600; opacity:1; color:var(--gold2)}
+#nav .rs{font-style:normal; font-weight:600; opacity:1; color:#3A1206; background:linear-gradient(100deg,#B8862B,#F6E3A1 45%,#D9A441); padding:0 14px; margin-left:4px}
+#nav .rs.on{color:#3A1206}
+#nav svg{width:20px; height:20px}
+#nav .snd .off{display:none} #nav .snd.muted .on-i{display:none} #nav .snd.muted .off{display:block}
+#fx{position:fixed; inset:0; width:100%; height:100%; z-index:90; pointer-events:none}
+#toast{position:fixed; left:50%; bottom:calc(84px + env(safe-area-inset-bottom,0px)); z-index:95; transform:translate(-50%,20px); background:var(--paper); color:var(--ink); padding:12px 20px; border-radius:12px; font-weight:600; max-width:min(92vw,440px); text-align:center; opacity:0; pointer-events:none; transition:opacity .3s,transform .3s; box-shadow:0 18px 40px -16px rgba(0,0,0,.7)}
+#toast.show{opacity:1; transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; transition-delay:0s!important}
+  html{scroll-behavior:auto}
+  .motif .mr{opacity:1; transform:none}
+}
+</style>
+</head>
+<body class="locked">
+
+<div id="intro" role="dialog" aria-label="Invitation cover">
+  <div class="door l velvet" aria-hidden="true"><svg class="dsvg" id="dL"></svg></div>
+  <div class="door r velvet" aria-hidden="true"><svg class="dsvg" id="dR"></svg></div>
+  <div class="glow" aria-hidden="true"></div>
+  <svg class="idecor" id="iDecor" aria-hidden="true"></svg>
+  <div class="lcard">
+    <svg class="arch" viewBox="0 0 360 500" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M6 494V172C6 92 104 64 180 6C256 64 354 92 354 172V494Z" fill="url(#zp)" stroke="url(#zg)" stroke-width="3.2"/>
+      <path d="M17 483V176C17 101 111 75 180 21C249 75 343 101 343 176V483Z" fill="none" stroke="#B8862B" stroke-width="1.1"/>
+      <path d="M25.5 474.5V179C25.5 108 117 83 180 32C243 83 334.5 108 334.5 179V474.5Z" fill="none" stroke="url(#zg)" stroke-width="3" stroke-dasharray="0 7.2" stroke-linecap="round"/>
+      <path d="M34 466V182C34 116 123 91 180 44C237 91 326 116 326 182V466Z" fill="none" stroke="#B8862B" stroke-width=".8"/>
+      <g id="cardOrn"></g>
+    </svg>
+    <div class="lc-in">
+      <svg class="lg" viewBox="0 0 200 190" aria-hidden="true"><g class="gpaths" fill="none" stroke="#9C6B1F" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></g></svg>
+      <p class="l1" lang="gu">॥ શ્રી ગણેશાય નમઃ ॥</p>
+      <p class="l2" lang="gu">શુભ લગ્ન</p>
+      <svg class="orn" viewBox="0 0 200 16" aria-hidden="true"><path d="M8 8H80M120 8H192" stroke="#B8862B" stroke-width="1"/><path d="M100 1L107 8L100 15L93 8Z" fill="url(#zg)"/><circle cx="84" cy="8" r="2.2" fill="#B8862B"/><circle cx="116" cy="8" r="2.2" fill="#B8862B"/><circle cx="100" cy="8" r="2.2" fill="#C2102E"/></svg>
+      <p class="l3">Ayushi<span>&amp;</span>Valay</p>
+      <p class="l4">29 December 2026 to 1 January 2027</p>
+      <button class="btn gold" id="openBtn" type="button"><span lang="gu">કંકોત્રી ખોલો</span><small>Open the invitation</small></button>
+    </div>
+  </div>
+</div>
+
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section id="home" aria-label="Ayushi and Valay">
+    <div class="zari velvet" id="zari" aria-hidden="true"><svg id="zSvg"></svg></div>
+    <div class="hero-in">
+      <svg class="gmark" viewBox="0 0 200 190" aria-hidden="true"><g class="gpaths" fill="none" stroke="#F6E3A1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></g></svg>
+      <p class="blz" lang="gu">॥ શ્રી ગણેશાય નમઃ ॥<span>॥ શ્રી ઉમિયા માતાજી પ્રસન્ન ॥</span><span>॥ શ્રી ખોડિયાર માતાજી પ્રસન્ન ॥</span></p>
+      <p class="shubh" lang="gu">શુભ લગ્ન</p>
+      <h1 class="names"><span class="n foil">Ayushi</span><span class="amp">&amp;</span><span class="n foil">Valay</span></h1>
+      <p class="meaning"><em>Ayushi</em> means a long life. <em>Valay</em> means a circle with no end. Together, a forever.</p>
+      <div class="range"><b>29 December 2026</b><i aria-hidden="true"></i><b>1 January 2027</b></div>
+      <div class="cd" role="timer" aria-label="Countdown to the wedding">
+        <div><b id="cdD">00</b><span lang="gu">દિવસ</span><span>days</span></div>
+        <div><b id="cdH">00</b><span lang="gu">કલાક</span><span>hours</span></div>
+        <div><b id="cdM">00</b><span lang="gu">મિનિટ</span><span>mins</span></div>
+        <div><b id="cdS">00</b><span lang="gu">સેકન્ડ</span><span>secs</span></div>
+      </div>
+      <div class="ctas"><a class="btn gold" href="#rsvp">RSVP</a><a class="btn line" href="#nimantran">Read the kankotri</a></div>
+    </div>
+  </section>
+
+  <div class="kinar" data-p="red" aria-hidden="true"></div>
+
+  <!-- ================= KANKOTRI ================= -->
+  <section id="nimantran" class="ivory" aria-labelledby="kH">
+    <div class="wrap">
+      <div class="saying">
+        <p class="sg" lang="gu">પડી પટોળે ભાત,<br>ફાટે પણ ફીટે નહીં</p>
+        <p class="se">“The pattern woven into a patola may tear, but it never fades.”<small>An old Gujarati saying, and our wish for Ayushi and Valay.</small></p>
+      </div>
+      <article class="kank">
+        <div class="kinar" data-p="red" aria-hidden="true"></div>
+        <div class="kank-in">
+          <h2 id="kH" class="sr">The invitation</h2>
+          <div class="lang" role="group" aria-label="Read in"><button type="button" data-l="gu" aria-pressed="true">ગુજરાતી</button><button type="button" data-l="en" aria-pressed="false">English</button></div>
+          <svg class="kg" viewBox="0 0 200 190" aria-hidden="true"><g class="gpaths" fill="none" stroke="#9C6B1F" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"></g></svg>
+          <div class="kt" data-l="gu" lang="gu">
+            <p class="k-hd">॥ શ્રી ગણેશાય નમઃ ॥</p>
+            <p class="k-kd">અમારા કુળદેવી શ્રી ઉમિયા માતાજી તથા શ્રી ખોડિયાર માતાજીની અસીમ કૃપાથી</p>
+            <p class="k-nm"><small>ચિ. સૌ. કાં.</small>આયુષી</p>
+            <p class="k-par">સુપુત્રી શ્રી ચિરાગકુમાર દશરથભાઈ પટેલ તથા શ્રીમતી ધર્મિષ્ઠાબેન ચિરાગકુમાર પટેલ</p>
+            <p class="k-join">ના શુભ લગ્ન</p>
+            <p class="k-nm"><small>ચિ.</small>વલય</p>
+            <p class="k-par">સુપુત્ર શ્રી અજયકુમાર રામજીભાઈ પટેલ તથા શ્રીમતી માયાબેન અજયકુમાર પટેલ</p>
+            <p class="k-join">સાથે નિર્ધાર્યા છે.</p>
+            <p class="k-inv">આ મંગલ પ્રસંગે આપ સહકુટુંબ પધારી નવદંપતીને આશીર્વાદ આપશો એવી અમારી ભાવભરી વિનંતી છે.</p>
+            <p class="k-li">લિ. પટેલ પરિવાર</p>
+          </div>
+          <div class="kt" data-l="en" lang="en" hidden>
+            <p class="k-hd" lang="gu">॥ શ્રી ગણેશાય નમઃ ॥</p>
+            <p class="k-kd">With the boundless grace of our Kuldevi, Shri Umiya Mataji and Shri Khodiyar Mataji, the wedding of</p>
+            <p class="k-nm">Ayushi</p>
+            <p class="k-par">daughter of Shri Chiragkumar Dashrathbhai Patel and Smt. Dharmisthaben Chiragkumar Patel</p>
+            <p class="k-join">with</p>
+            <p class="k-nm">Valay</p>
+            <p class="k-par">son of Shri Ajaykumar Ramjibhai Patel and Smt. Mayaben Ajaykumar Patel</p>
+            <p class="k-join">has been blessed and fixed.</p>
+            <p class="k-inv">We warmly invite you and your family to join us on this auspicious occasion and bless the newlyweds.</p>
+            <p class="k-li">With love, the Patel families</p>
+          </div>
+        </div>
+        <div class="kinar" data-p="red" aria-hidden="true"></div>
+      </article>
+
+      <nav class="days" aria-label="The four celebrations">
+        <a class="day" href="#mehndi" style="--c:#0B4A34" data-k="green"><span class="d">29</span><span class="m">Tuesday, December 2026</span><span class="n" lang="gu">મહેંદી</span><span class="e">Mehndi, 5 pm</span></a>
+        <a class="day" href="#puja" style="--c:#9E4705" data-k="kesar"><span class="d">30</span><span class="m">Wednesday, December 2026</span><span class="n" lang="gu">ગ્રહશાંતિ</span><span class="e">Grahshanti, morning</span></a>
+        <a class="day" href="#garba" style="--c:#140B33;--a:#FF8CC2" data-k="night"><span class="d">31</span><span class="m">Thursday, December 2026</span><span class="n" lang="gu">રાસ ગરબા</span><span class="e">Garba night, 6 pm</span></a>
+        <p class="yrline">A new year, a new beginning</p>
+        <a class="day" href="#lagna" style="--c:#6E0A1C" data-k="red"><span class="ny">2027</span><span class="d">01</span><span class="m">Friday, January 2027</span><span class="n" lang="gu">શુભ લગ્ન</span><span class="e">Wedding, 6 pm</span></a>
+      </nav>
+    </div>
+  </section>
+
+  <div class="kinar" data-p="green" aria-hidden="true"></div>
+  <section class="ch" id="mehndi" data-ev="mehndi" aria-labelledby="h-mehndi"></section>
+  <div class="kinar" data-p="kesar" aria-hidden="true"></div>
+  <section class="ch" id="puja" data-ev="puja" aria-labelledby="h-puja"></section>
+  <div class="kinar" data-p="night" aria-hidden="true"></div>
+  <section class="ch" id="garba" data-ev="garba" aria-labelledby="h-garba"><canvas id="fw" aria-hidden="true"></canvas></section>
+  <div class="kinar" data-p="red" aria-hidden="true"></div>
+  <section class="ch" id="lagna" data-ev="lagna" aria-labelledby="h-lagna"></section>
+  <div class="kinar" data-p="red" aria-hidden="true"></div>
+
+  <!-- ================= RSVP ================= -->
+  <section id="rsvp" class="ivory" aria-labelledby="rH">
+    <div class="wrap narrow">
+      <header class="sh"><h2 id="rH"><span class="gu" lang="gu">આપ પધારશો ને?</span><span class="en">Will you join us?</span></h2><p>Please let the family know as soon as you can.</p></header>
+      <form class="rcard" id="rForm" novalidate>
+        <svg class="stamp" id="stamp" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="none" stroke="#A3122C" stroke-width="3"/><circle cx="50" cy="50" r="37" fill="none" stroke="#A3122C" stroke-width="1.2" stroke-dasharray="3 3"/><circle cx="50" cy="50" r="15" fill="#C8102E"/><g fill="#FFF3D6"><ellipse cx="44" cy="46" rx="1.3" ry="2.6" transform="rotate(30 44 46)"/><ellipse cx="55" cy="52" rx="1.3" ry="2.6" transform="rotate(-20 55 52)"/><ellipse cx="50" cy="42" rx="1.3" ry="2.6"/></g><text x="50" y="80" text-anchor="middle" font-size="9" fill="#A3122C" font-family="Noto Serif Gujarati, serif" font-weight="700">શુભમ્</text></svg>
+        <label class="fld"><span>Your name</span><input type="text" id="rName" autocomplete="name" placeholder="For example, Mehta parivar"></label>
+        <fieldset class="set"><legend>Will you be there?</legend>
+          <div class="chips"><label class="chip"><input type="radio" name="come" value="yes" checked><span>Yes, with joy</span></label><label class="chip"><input type="radio" name="come" value="no"><span>Sorry, we can't</span></label></div>
+        </fieldset>
+        <fieldset class="set"><legend>You're family or friend of</legend>
+          <div class="chips"><label class="chip"><input type="radio" name="side" value="bride" checked><span>Ayushi</span></label><label class="chip" style="--cc:#0B4A34"><input type="radio" name="side" value="groom"><span>Valay</span></label></div>
+        </fieldset>
+        <div class="fld if-come"><span>How many of you?</span>
+          <div class="stepper"><button type="button" id="cMinus" aria-label="One fewer">−</button><output id="rCount" aria-live="polite">2</output><button type="button" id="cPlus" aria-label="One more">+</button></div>
+        </div>
+        <fieldset class="set if-come"><legend>Which celebrations?</legend>
+          <div class="chips">
+            <label class="chip" style="--cc:#0B4A34"><input type="checkbox" name="ev" value="Mehndi" checked><span>Mehndi, 29 Dec</span></label>
+            <label class="chip" style="--cc:#9E4705"><input type="checkbox" name="ev" value="Grahshanti" checked><span>Grahshanti, 30 Dec</span></label>
+            <label class="chip" style="--cc:#140B33"><input type="checkbox" name="ev" value="Garba night" checked><span>Garba, 31 Dec</span></label>
+            <label class="chip"><input type="checkbox" name="ev" value="Wedding" checked><span>Wedding, 1 Jan</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="set if-come"><legend>Food preference</legend>
+          <div class="chips"><label class="chip"><input type="radio" name="food" value="Regular" checked><span>Regular</span></label><label class="chip"><input type="radio" name="food" value="Jain"><span>Jain</span></label><label class="chip"><input type="radio" name="food" value="Swaminarayan"><span>Swaminarayan</span></label></div>
+        </fieldset>
+        <label class="fld"><span>Your blessing for Ayushi and Valay (optional)</span><textarea id="rMsg" rows="3"></textarea></label>
+        <p class="err" id="rErr" role="alert"></p>
+        <a class="btn gold send" id="rSend" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg><span id="rSendT">Send RSVP on WhatsApp</span></a>
+        <div class="done" id="rDone" hidden>
+          <h3 lang="gu">આભાર!</h3>
+          <p id="rDoneT">Your RSVP is ready in WhatsApp. Tap send there and the family will receive it.</p>
+          <div class="acts"><a class="btn ink" id="rAgain" href="#" target="_blank" rel="noopener">Open WhatsApp again</a><button class="btn line" style="color:var(--ink);box-shadow:inset 0 0 0 1px rgba(53,9,15,.35)" id="rEdit" type="button">Change my RSVP</button></div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="kinar" data-p="red" aria-hidden="true"></div>
+  <div class="fin">
+    <p class="li" lang="gu">લિ.</p>
+    <p class="fam" lang="gu">પટેલ પરિવાર</p>
+    <p class="fe">With love, the Patel families</p>
+    <p class="tag">#AyushiWedsValay</p>
+  </div>
+</footer>
+
+<nav id="nav" aria-label="Sections">
+  <a href="#home" class="mono" data-s="home" aria-label="Home">A&amp;V</a>
+  <a href="#mehndi" data-s="mehndi" aria-label="Mehndi">I</a>
+  <a href="#puja" data-s="puja" aria-label="Grahshanti">II</a>
+  <a href="#garba" data-s="garba" aria-label="Garba night">III</a>
+  <a href="#lagna" data-s="lagna" aria-label="Wedding">IV</a>
+  <a href="#rsvp" class="rs" data-s="rsvp">RSVP</a>
+  <button class="snd" id="snd" type="button" aria-label="Mute music" aria-pressed="false"><svg class="on-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button>
+</nav>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+(() => {
+'use strict';
+/* =====================================================================
+   EDIT DETAILS HERE
+   Venues: add the address in quotes and a map button appears.
+   WhatsApp: add numbers with country code, e.g. '919812345678'.
+   If a number is left empty, WhatsApp opens and the guest picks who to send to.
+   ===================================================================== */
+const C = {
+  couple: 'Ayushi and Valay',
+  weddingISO: '2027-01-01T18:00:00+05:30',
+  newYearISO: '2027-01-01T00:00:00+05:30',
+  rsvp: { bride: '', groom: '' },
+  venue: { mehndi: '', puja: '', garba: '', lagna: '' }
+};
+const EV = [
+  { id: 'mehndi', no: 'I', gu: 'મહેંદી', en: 'Mehndi', pal: 'green', motif: 'parrot',
+    lede: 'An evening of henna, folk songs and the first of many celebrations.',
+    dd: '29', mm: 'December 2026', wk: 'Tuesday, 5:00 pm onwards', start: '2026-12-29T17:00:00+05:30', end: '2026-12-29T21:00:00+05:30',
+    cap: 'Popat, the parrot. In patola weaving it carries messages of love.',
+    rites: [
+      ['મહેંદી રસમ', 'Mehndi rasam', "Henna for Ayushi, with Valay's name hidden somewhere in the design for him to find."],
+      ['સાંજી અને લગ્નગીત', 'Sanji and lagna geet', 'The women of the family gather to sing traditional Gujarati wedding songs.']
+    ] },
+  { id: 'puja', no: 'II', gu: 'ગ્રહશાંતિ', en: 'Grahshanti', pal: 'kesar', motif: 'kalash',
+    lede: 'A morning of prayers, inviting every blessing before the wedding.',
+    dd: '30', mm: 'December 2026', wk: 'Wednesday, morning', start: '2026-12-30T09:00:00+05:30', end: '2026-12-30T12:30:00+05:30',
+    cap: 'The kalash. Fullness, prosperity and a blessed beginning.',
+    rites: [
+      ['ગણેશ સ્થાપના', 'Ganesh sthapana', 'Shree Ganesh is invited first, so that every ritual that follows is free of obstacles.'],
+      ['મંડપ મુહૂર્ત', 'Mandap muhurat', 'The first pillar of the wedding mandap is set at an auspicious moment.'],
+      ['ગ્રહશાંતિ પૂજા', 'Grahshanti puja', 'Prayers to the nine grahas for a peaceful and prosperous married life.'],
+      ['પીઠી', 'Pithi', 'Turmeric paste for the bridal glow, applied by family amid plenty of laughter.']
+    ] },
+  { id: 'garba', no: 'III', gu: 'રાસ ગરબા', en: 'Garba night', pal: 'night', motif: 'nari',
+    lede: "Garba on New Year's Eve. We dance out of 2026 and into 2027, together.",
+    dd: '31', mm: 'December 2026', wk: 'Thursday, 6:00 pm onwards', start: '2026-12-31T18:00:00+05:30', end: '2027-01-01T00:30:00+05:30',
+    cap: 'Nari kunj, the dancing women. The joy of garba, woven in silk.',
+    rites: [
+      ['રાસ ગરબા', 'Raas garba', 'Circle after circle around the garbo, for as long as the dhol keeps playing.'],
+      ['દાંડિયા રાસ', 'Dandiya raas', 'Sticks, rhythm and the whole family in step.'],
+      ['નવા વર્ષનું સ્વાગત', 'Welcoming 2027', "At midnight we ring in the new year, the year Ayushi and Valay's story begins."]
+    ] },
+  { id: 'lagna', no: 'IV', gu: 'શુભ લગ્ન', en: 'The wedding', pal: 'red', motif: 'hathi', seq: true,
+    lede: 'On the first evening of 2027, Ayushi and Valay begin their life together.',
+    dd: '01', mm: 'January 2027', wk: 'Friday, 6:00 pm', start: '2027-01-01T18:00:00+05:30', end: '2027-01-01T22:30:00+05:30',
+    cap: 'Hathi, the elephant. Royalty, strength and good fortune.',
+    rites: [
+      ['જાન આગમન', 'Jaan aagman', "Valay's baraat arrives with dhol, dancing and the whole family."],
+      ['પોંખણું', 'Ponkhanu', "Ayushi's mother welcomes Valay with aarti, and playfully tries to catch his nose."],
+      ['મધુપર્ક', 'Madhuparka', 'The groom is seated in the mandap and honoured with panchamrut.'],
+      ['કન્યા આગમન', 'Kanya aagman', 'Ayushi is escorted to the mandap by her mama, with an antarpat held between the couple.'],
+      ['કન્યાદાન', 'Kanyadaan', "Ayushi's parents place her hand in Valay's with their blessings."],
+      ['હસ્તમેળાપ', 'Hastmelap', 'The joining of hands, as the ends of their clothes are tied together.'],
+      ['મંગળ ફેરા', 'Mangal fera', 'Four rounds of the sacred fire, for dharma, artha, kama and moksha.'],
+      ['સપ્તપદી', 'Saptapadi', 'Seven steps together, and a promise with every step.'],
+      ['કંસાર', 'Kansar', 'The couple feed each other kansar, a sweet start to married life.'],
+      ['વિદાય', 'Vidaai', 'A tearful, loving farewell as Ayushi sets off for her new home.']
+    ] }
+];
+
+/* ===================================================================== */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const rnd = (a, b) => a + Math.random() * (b - a);
+const mod = (n, m) => ((n % m) + m) % m;
+const DPR = () => Math.min(2, devicePixelRatio || 1);
+let opened = false;
+function toast(m, ms = 3200) { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), ms); }
+function rng(a) { return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+
+/* =====================================================================
+   PATOLA ENGINE: double-ikat geometry with feathered edges
+   ===================================================================== */
+const PALS = {
+  red: { r: '#8E1022', g: '#0F5A3C', y: '#E4A526', w: '#F3E7CF', k: '#22090F' },
+  green: { r: '#0F5A3C', g: '#8E1022', y: '#E4A526', w: '#F3E7CF', k: '#081F16' },
+  kesar: { r: '#B5560A', g: '#6E0A1C', y: '#FFD66B', w: '#FFF1D6', k: '#2A0E05' },
+  night: { r: '#2B1B72', g: '#C2185B', y: '#E9AE2A', w: '#F3E7CF', k: '#0B0620' }
+};
+function navratna(x, y) {
+  const X = mod(x, 24), Y = mod(y, 24), d = Math.abs(X - 12) + Math.abs(Y - 12);
+  if (d === 12) return 'k';
+  if (d < 12) { if ((X === 12 || Y === 12) && (d === 8 || d === 9)) return 'y'; return 'yykwwggyrrwr'[d]; }
+  return 'wwrrykgggykg'[24 - d];
+}
+function kinarFn(x, y) {
+  const u = mod(x, 12);
+  if (y === 0 || y === 13) return 'k'; if (y === 1 || y === 12) return 'y'; if (y === 2 || y === 11) return 'w';
+  const t = y - 3, a = Math.abs(u - 5.5);
+  if (a <= 1 && (t === 5 || t === 6)) return 'y';
+  if (a >= 4.8 && t <= 1) return 'y';
+  return a <= (t + 0.5) * 0.72 ? 'r' : 'g';
+}
+function weaveRow(ctx, y, cols, cs, fn, pal, R, ox = 0, oy = 0) {
+  const top = oy + y * cs; let x = 0, start = ox;
+  while (x < cols) {
+    const c = fn(x, y); let x2 = x + 1; while (x2 < cols && fn(x2, y) === c) x2++;
+    const end = x2 >= cols ? ox + cols * cs : ox + x2 * cs + (R() - 0.5) * 0.7 * cs;
+    ctx.fillStyle = pal[c]; ctx.fillRect(start, top, end - start + 0.6, cs + 0.6);
+    if (x2 < cols && R() < 0.55) { ctx.globalAlpha = 0.5; ctx.fillRect(end - 0.5, top + cs * (0.15 + R() * 0.5), cs * (0.25 + R() * 0.55), Math.max(1, cs * 0.28)); ctx.globalAlpha = 1; }
+    start = end; x = x2;
+  }
+  ctx.fillStyle = 'rgba(0,0,0,.1)'; for (let t = 1; t < cs; t += 3) ctx.fillRect(ox, top + t, cols * cs, 1);
+  ctx.fillStyle = 'rgba(255,255,255,.05)'; ctx.fillRect(ox, top, cols * cs, 1);
+}
+function tileURL(fn, cols, rows, cs, pal, seed = 3) {
+  const c = document.createElement('canvas'); c.width = cols * cs; c.height = rows * cs; const x = c.getContext('2d'), R = rng(seed);
+  for (let y = 0; y < rows; y++) weaveRow(x, y, cols, cs, fn, pal, R);
+  return c.toDataURL('image/png');
+}
+const TILES = {};
+function kinarURL(p) { return TILES['k' + p] || (TILES['k' + p] = tileURL(kinarFn, 48, 14, 6, PALS[p], 11)); }
+function latURL(p) { return TILES['l' + p] || (TILES['l' + p] = tileURL(navratna, 48, 48, 5, PALS[p], 5)); }
+
+/* pixel motifs, drawn as vectors then woven as ikat cells */
+const MC = { r: '#ff0000', g: '#00ff00', y: '#ffff00', w: '#ffffff', k: '#000000' };
+const REF = { r: [255, 0, 0], g: [0, 255, 0], y: [255, 255, 0], w: [255, 255, 255], k: [0, 0, 0] };
+const MOTIFS = {
+  parrot(x) {
+    x.fillStyle = MC.g; x.beginPath(); x.moveTo(15, 26); x.lineTo(4, 39); x.lineTo(10, 39.5); x.lineTo(19.5, 29); x.closePath(); x.fill();
+    x.strokeStyle = MC.y; x.lineWidth = 1.2; x.beginPath(); x.moveTo(13, 30); x.lineTo(7, 38); x.stroke();
+    x.fillStyle = MC.g; x.beginPath(); x.ellipse(20, 21, 7.5, 11, -0.45, 0, 6.283); x.fill();
+    x.fillStyle = MC.y; x.beginPath(); x.ellipse(18, 22.5, 4.4, 8, -0.45, 0, 6.283); x.fill();
+    x.fillStyle = MC.r; x.beginPath(); x.ellipse(15.6, 27.6, 2.6, 2.2, -0.45, 0, 6.283); x.fill();
+    x.strokeStyle = MC.g; x.lineWidth = 1.1; x.beginPath(); x.moveTo(20.5, 17); x.lineTo(17.5, 24); x.stroke();
+    x.fillStyle = MC.g; x.beginPath(); x.arc(26, 11, 6.2, 0, 6.283); x.fill();
+    x.strokeStyle = MC.r; x.lineWidth = 1.8; x.beginPath(); x.arc(26, 11, 6.2, 1.7, 3.3); x.stroke();
+    x.fillStyle = MC.r; x.beginPath(); x.moveTo(30.5, 8); x.quadraticCurveTo(37, 9, 34.5, 16); x.lineTo(30, 13.5); x.closePath(); x.fill();
+    x.fillStyle = MC.w; x.fillRect(26.5, 7.8, 2.4, 2.4);
+    x.fillStyle = MC.k; x.fillRect(8, 33, 29, 2.6);
+    x.fillStyle = MC.g; x.beginPath(); x.ellipse(35, 31.5, 3, 1.6, -0.5, 0, 6.283); x.fill(); x.beginPath(); x.ellipse(9, 31.5, 3, 1.6, 0.5, 0, 6.283); x.fill();
+    x.fillStyle = MC.r; x.fillRect(20, 30, 1.8, 3.5); x.fillRect(23.5, 30, 1.8, 3.5);
+  },
+  kalash(x) {
+    x.fillStyle = MC.g;
+    [[20, 11, 7, 4, 14, 12], [20, 11, 33, 4, 26, 12], [20, 11, 12, 1, 18, 11], [20, 11, 28, 1, 22, 11]].forEach(([a, b, c, d, e, f]) => { x.beginPath(); x.moveTo(a, b); x.lineTo(c, d); x.lineTo(e, f); x.closePath(); x.fill(); });
+    x.fillStyle = MC.k; x.beginPath(); x.ellipse(20, 8.5, 4.8, 5.4, 0, 0, 6.283); x.fill();
+    x.fillStyle = MC.y; x.fillRect(11.5, 13, 17, 2.8);
+    x.fillStyle = MC.r; x.fillRect(15, 15.5, 10, 4.5);
+    x.beginPath(); x.ellipse(20, 27, 12, 10.5, 0, 0, 6.283); x.fill();
+    x.fillStyle = MC.y; x.fillRect(8, 21.5, 24, 2.2); x.fillRect(9, 32.5, 22, 1.6);
+    x.strokeStyle = MC.w; x.lineWidth = 1.4; x.beginPath();
+    x.moveTo(15.5, 27.5); x.lineTo(24.5, 27.5); x.moveTo(20, 23.5); x.lineTo(20, 31.5); x.moveTo(20, 23.5); x.lineTo(23.5, 23.5); x.moveTo(24.5, 27.5); x.lineTo(24.5, 31); x.moveTo(20, 31.5); x.lineTo(16.5, 31.5); x.moveTo(15.5, 27.5); x.lineTo(15.5, 24); x.stroke();
+    x.fillStyle = MC.y; x.fillRect(13, 36.5, 14, 2.6);
+  },
+  nari(x) {
+    x.save(); x.beginPath(); x.moveTo(20, 16); x.lineTo(6, 37); x.lineTo(34, 37); x.closePath(); x.fillStyle = MC.g; x.fill(); x.clip();
+    x.fillStyle = MC.y; x.fillRect(0, 26, 40, 2.4); x.fillStyle = MC.r; x.fillRect(0, 31.5, 40, 2.6);
+    x.fillStyle = MC.w; [[15, 22], [24, 22], [11, 29], [20, 29], [28, 29], [16, 35], [24, 35]].forEach(([a, b]) => x.fillRect(a, b, 1.8, 1.8));
+    x.restore();
+    x.fillStyle = MC.r; x.fillRect(16.8, 10, 6.4, 7.5);
+    x.fillStyle = MC.k; x.beginPath(); x.arc(20, 6.2, 3.8, 0, 6.283); x.fill();
+    x.strokeStyle = MC.r; x.lineWidth = 1.8; x.beginPath(); x.moveTo(17.5, 11.5); x.lineTo(12, 8); x.moveTo(22.5, 11.5); x.lineTo(28, 8); x.stroke();
+    x.strokeStyle = MC.y; x.lineWidth = 1.5; x.beginPath(); x.moveTo(12, 8.5); x.lineTo(7.5, 1.5); x.moveTo(28, 8.5); x.lineTo(32.5, 1.5); x.stroke();
+    x.fillStyle = MC.k; x.fillRect(15.5, 37, 3, 2); x.fillRect(21.5, 37, 3, 2);
+  },
+  hathi(x) {
+    x.strokeStyle = MC.r; x.lineWidth = 1.6; x.beginPath(); x.moveTo(6.5, 17); x.lineTo(4, 26); x.stroke();
+    x.fillStyle = MC.r; x.beginPath(); x.ellipse(18, 21, 12.5, 8.5, 0, 0, 6.283); x.fill();
+    x.beginPath(); x.arc(30.5, 16, 6.8, 0, 6.283); x.fill();
+    x.lineWidth = 3.6; x.strokeStyle = MC.r; x.beginPath(); x.moveTo(35, 17); x.quadraticCurveTo(39.5, 25, 36.5, 33.5); x.stroke();
+    [[8, 24, 4.5, 11], [14, 25, 4.5, 10], [21, 25, 4.5, 10], [26.5, 23, 4.5, 12]].forEach(([a, b, c, d]) => x.fillRect(a, b, c, d));
+    x.fillStyle = MC.y; x.fillRect(9, 11, 16, 10);
+    x.fillStyle = MC.g; x.fillRect(9, 14.5, 16, 2);
+    x.fillStyle = MC.w; [[11, 18.5], [15.5, 18.5], [20, 18.5]].forEach(([a, b]) => x.fillRect(a, b, 2, 2));
+    x.fillStyle = MC.k; x.fillRect(12, 8, 10, 3.2);
+    x.fillStyle = MC.g; x.beginPath(); x.ellipse(28.5, 17.5, 3.4, 5.2, 0, 0, 6.283); x.fill();
+    x.fillStyle = MC.w; x.fillRect(31.5, 13, 2.2, 2.2);
+    x.strokeStyle = MC.w; x.lineWidth = 1.6; x.beginPath(); x.moveTo(33.5, 21); x.lineTo(37.5, 23); x.stroke();
+    x.fillStyle = MC.y; [[8, 33], [14, 33], [21, 33], [26.5, 33]].forEach(([a, b]) => x.fillRect(a, b, 4.5, 2));
+  }
+};
+function pixelMotif(draw, n = 40, S = 4) {
+  const c = document.createElement('canvas'); c.width = c.height = n * S; const x = c.getContext('2d'); x.scale(S, S); draw(x);
+  const d = x.getImageData(0, 0, n * S, n * S).data, g = [];
+  for (let cy = 0; cy < n; cy++) {
+    const row = [];
+    for (let cx = 0; cx < n; cx++) {
+      const votes = {}; let op = 0;
+      for (let sy = 0; sy < S; sy++) for (let sx = 0; sx < S; sx++) {
+        const i = ((cy * S + sy) * n * S + (cx * S + sx)) * 4; if (d[i + 3] < 128) continue; op++;
+        let best = 'k', bd = 1e9; for (const k in REF) { const r = REF[k], dd = (r[0] - d[i]) ** 2 + (r[1] - d[i + 1]) ** 2 + (r[2] - d[i + 2]) ** 2; if (dd < bd) { bd = dd; best = k; } }
+        votes[best] = (votes[best] || 0) + 1;
+      }
+      if (op < S * S / 2) { row.push(null); continue; }
+      let bk = null, bv = -1; for (const k in votes) if (votes[k] > bv) { bv = votes[k]; bk = k; } row.push(bk);
+    }
+    g.push(row);
+  }
+  return g;
+}
+const MPAL = { r: '#A3122C', g: '#15724A', y: '#D5961A', w: '#FFFFFF', k: '#2A1016' };
+function motifSVG(grid, seed = 9) {
+  const R = rng(seed); let s = '';
+  grid.forEach((row, y) => {
+    let x = 0, g = '', start = 0;
+    while (x < row.length) {
+      const c = row[x]; let x2 = x + 1; while (x2 < row.length && row[x2] === c) x2++;
+      const end = x2 >= row.length ? row.length : x2 + (R() - 0.5) * 0.6;
+      if (c) g += `<rect x="${start.toFixed(2)}" y="${y}" width="${(end - start + 0.05).toFixed(2)}" height="1.04" fill="${MPAL[c]}"/>`;
+      start = end; x = x2;
+    }
+    if (g) s += `<g class="mr" style="--i:${y}">${g}</g>`;
+  });
+  return s;
+}
+
+/* =====================================================================
+   GANESH MARK
+   ===================================================================== */
+const GANESH = ['M72 66C74 46 90 36 100 16C110 36 126 46 128 66', 'M66 70Q100 60 134 70', 'M70 74C62 88 64 102 76 112', 'M130 74C138 88 136 102 124 112',
+  'M70 82C50 70 26 76 22 98C18 120 36 138 56 134C64 132 70 126 74 118', 'M130 82C150 70 174 76 178 98C182 120 164 138 144 134C136 132 130 126 126 118',
+  'M60 90C46 90 38 102 42 114C46 124 56 124 62 118', 'M140 90C154 90 162 102 158 114C154 124 144 124 138 118', 'M94 72Q100 86 106 72', 'M82 96Q88 91 94 96', 'M106 96Q112 91 118 96',
+  'M90 104C87 130 90 152 101 164C112 176 130 172 133 159C135 148 124 143 118 150C115 154 118 160 124 159', 'M110 104C110 124 112 138 119 144', 'M84 118C79 125 79 131 84 135', 'M116 118L119 125'];
+$$('.gpaths').forEach(g => { g.innerHTML = GANESH.map(d => `<path d="${d}"/>`).join('') + `<circle cx="100" cy="40" r="5" fill="${g.getAttribute('stroke')}" stroke="none"/><circle cx="100" cy="90" r="4.5" fill="#D6246E" stroke="none"/>`; });
+
+/* =====================================================================
+   SOUND: temple bell, santoor over a tanpura drone, firework pops
+   ===================================================================== */
+const Snd = (() => {
+  let ac = null, master, amb, noise, on = false, timer = 0, next = 0, idx = 4, drone = false;
+  const SC = [196, 220, 261.63, 293.66, 329.63, 392, 440, 523.25, 587.33, 659.25];
+  function init() {
+    if (ac) { if (ac.state === 'suspended') ac.resume(); return true; }
+    const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return false;
+    try { ac = new AC(); } catch (e) { return false; }
+    master = ac.createGain(); master.gain.value = 0.85; const comp = ac.createDynamicsCompressor(); master.connect(comp); comp.connect(ac.destination);
+    amb = ac.createGain(); amb.gain.value = 0.9; amb.connect(master);
+    noise = ac.createBuffer(1, ac.sampleRate * 0.5, ac.sampleRate); const d = noise.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+    return true;
+  }
+  function env(g, t, a, p, dd) { g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(Math.max(p, 0.0002), t + a); g.gain.exponentialRampToValueAtTime(0.0001, t + a + dd); }
+  function tone(f, t, type, p, dd, bus) { const o = ac.createOscillator(), g = ac.createGain(); o.type = type; o.frequency.value = f; env(g, t, 0.004, p, dd); o.connect(g); g.connect(bus || master); o.start(t); o.stop(t + dd + 0.1); }
+  function bell() { if (!ac || !on) return; const t = ac.currentTime + 0.03; [[1, 0.3, 3.2], [2.76, 0.13, 2], [5.4, 0.07, 1.2], [8.93, 0.035, 0.7]].forEach(([m, v, d]) => tone(440 * m, t, 'sine', v, d)); }
+  function pluck(f, t, v) { tone(f, t, 'triangle', v, 1.5, amb); tone(f * 2.003, t, 'sine', v * 0.45, 0.8, amb); tone(f * 3.01, t, 'sine', v * 0.16, 0.4, amb); }
+  function chord() { if (!ac || !on) return; const t = ac.currentTime + 0.02; [2, 4, 5, 7].forEach((k, j) => pluck(SC[k] * 2, t + j * 0.09, 0.08)); }
+  function pop() { if (!ac || !on) return; const t = ac.currentTime; const s = ac.createBufferSource(); s.buffer = noise; const f = ac.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = 700 + Math.random() * 500; const g = ac.createGain(); env(g, t, 0.003, 0.28, 0.35); s.connect(f); f.connect(g); g.connect(master); s.start(t); s.stop(t + 0.45);
+    const s2 = ac.createBufferSource(); s2.buffer = noise; const h = ac.createBiquadFilter(); h.type = 'highpass'; h.frequency.value = 5000; const g2 = ac.createGain(); env(g2, t + 0.08, 0.01, 0.06, 0.5); s2.connect(h); h.connect(g2); g2.connect(master); s2.start(t + 0.08); s2.stop(t + 0.7); }
+  function startDrone() {
+    drone = true; const lp = ac.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 900; lp.connect(amb); const dg = ac.createGain(); dg.gain.value = 0; dg.connect(lp); dg.gain.linearRampToValueAtTime(0.05, ac.currentTime + 3);
+    [[65.41, 'sine', 1], [98, 'triangle', 0.5], [130.81, 'triangle', 0.55], [131.2, 'sawtooth', 0.1]].forEach(([f, ty, v]) => { const o = ac.createOscillator(), g = ac.createGain(); o.type = ty; o.frequency.value = f; g.gain.value = v; const l = ac.createOscillator(), lg = ac.createGain(); l.frequency.value = rnd(0.08, 0.2); lg.gain.value = v * 0.35; l.connect(lg); lg.connect(g.gain); o.connect(g); g.connect(dg); o.start(); l.start(); });
+  }
+  function schedule() {
+    if (!ac || !on) return;
+    while (next < ac.currentTime + 0.25) {
+      if (Math.random() < 0.75) { idx = clamp(idx + Math.round(rnd(-2.4, 2.4)), 0, SC.length - 1); pluck(SC[idx], next, 0.05); if (Math.random() < 0.18) { pluck(SC[idx], next + 0.08, 0.028); pluck(SC[idx], next + 0.16, 0.018); } }
+      next += [0.36, 0.36, 0.72, 0.18, 1.08][Math.floor(Math.random() * 5)];
+    }
+  }
+  function start() { if (!init()) return; on = true; master.gain.setTargetAtTime(0.85, ac.currentTime, 0.2); next = ac.currentTime + 1.2; if (!drone) startDrone(); if (!timer) timer = setInterval(schedule, 40); }
+  function stop() { on = false; if (ac) master.gain.setTargetAtTime(0, ac.currentTime, 0.15); }
+  return { init, start, stop, bell, chord, pop, get on() { return on; } };
+})();
+
+/* =====================================================================
+   FX: akshat (rice), kumkum, marigold petals, gold
+   ===================================================================== */
+const FX = (() => {
+  const cv = $('#fx'), ctx = cv.getContext('2d'); let W, H, run = false, last = 0; const P = [];
+  function size() { const d = DPR(); W = innerWidth; H = innerHeight; cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0); }
+  size(); addEventListener('resize', size);
+  const PET = ['#FF8A1A', '#FFB020', '#FFD23F', '#E0283F'];
+  function burst(x, y, n = 70, kinds = ['akshat', 'petal', 'gold']) {
+    if (RM) n = Math.min(n, 12);
+    for (let i = 0; i < n; i++) { const k = kinds[i % kinds.length], a = rnd(0, 6.283), sp = rnd(160, 620);
+      P.push({ k, x, y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - rnd(150, 380), r: rnd(0, 6.3), vr: rnd(-8, 8), life: 0, max: rnd(1.6, 2.8), c: k === 'petal' ? PET[i % 4] : k === 'kumkum' ? '#C8102E' : '#F6E3A1', s: k === 'petal' ? rnd(6, 10) : rnd(2.5, 4.5) }); }
+    if (!run) { run = true; last = 0; requestAnimationFrame(tick); }
+  }
+  function rain(n = 70) {
+    for (let i = 0; i < n; i++) { const k = ['petal', 'akshat', 'gold'][i % 3]; P.push({ k, x: rnd(0, W), y: rnd(-120, -10), vx: rnd(-30, 30), vy: rnd(40, 170), r: rnd(0, 6.3), vr: rnd(-4, 4), life: 0, max: rnd(3.2, 5), soft: 1, c: k === 'petal' ? PET[i % 4] : '#F6E3A1', s: k === 'petal' ? rnd(6, 10) : rnd(2.5, 4.5) }); }
+    if (!run) { run = true; last = 0; requestAnimationFrame(tick); }
+  }
+  function tick(now) {
+    const dt = last ? Math.min(0.05, (now - last) / 1000) : 0.016; last = now; ctx.clearRect(0, 0, W, H);
+    for (let i = P.length - 1; i >= 0; i--) {
+      const p = P[i]; p.life += dt; if (p.life > p.max || p.y > H + 40) { P.splice(i, 1); continue; }
+      const dr = p.soft ? 0.99 : 0.975; p.vx *= dr; p.vy = p.vy * dr + (p.soft ? 30 : 540) * dt;
+      p.x += (p.vx + (p.k === 'petal' ? Math.sin(p.life * 3 + p.r) * 30 : 0)) * dt; p.y += p.vy * dt; p.r += p.vr * dt;
+      ctx.save(); ctx.globalAlpha = 1 - clamp((p.life - p.max * 0.7) / (p.max * 0.3), 0, 1); ctx.translate(p.x, p.y); ctx.rotate(p.r);
+      if (p.k === 'petal') { ctx.scale(1, Math.abs(Math.cos(p.life * 4 + p.r)) * 0.8 + 0.2); ctx.fillStyle = p.c; ctx.beginPath(); ctx.ellipse(0, 0, p.s * 0.45, p.s * 0.85, 0, 0, 6.283); ctx.fill(); }
+      else if (p.k === 'akshat') { ctx.fillStyle = '#FFF6DE'; ctx.beginPath(); ctx.ellipse(0, 0, 1.3, 3.2, 0, 0, 6.283); ctx.fill(); ctx.fillStyle = 'rgba(200,16,46,.55)'; ctx.fillRect(-0.6, -0.6, 1.2, 1.2); }
+      else if (p.k === 'kumkum') { ctx.fillStyle = p.c; ctx.beginPath(); ctx.arc(0, 0, p.s * 0.5, 0, 6.283); ctx.fill(); }
+      else { const f = Math.abs(Math.cos(p.life * 9 + p.r)); ctx.globalAlpha *= 0.4 + 0.6 * f; ctx.fillStyle = p.c; ctx.fillRect(-p.s / 2, -p.s / 2, p.s, p.s * (0.3 + f * 0.7)); }
+      ctx.restore();
+    }
+    if (P.length) requestAnimationFrame(tick); else { run = false; ctx.clearRect(0, 0, W, H); }
+  }
+  return { burst, rain };
+})();
+
+/* =====================================================================
+   HAVELI: velvet, zari jaal, zardozi mandala, marigold toran, diyas
+   ===================================================================== */
+const f1 = n => Math.round(n * 10) / 10;
+(function velvet() {
+  const jaal = `<svg xmlns="http://www.w3.org/2000/svg" width="72" height="108" viewBox="0 0 72 108">
+<g fill="none" stroke="#E3B75A" stroke-opacity=".30" stroke-width="1"><path d="M36 0C36 27 0 27 0 54C0 81 36 81 36 108M36 0C36 27 72 27 72 54C72 81 36 81 36 108"/></g>
+<g fill="none" stroke="#E3B75A" stroke-opacity=".16" stroke-width=".7"><path d="M36 8C36 30 7 31 7 54C7 77 36 78 36 100M36 8C36 30 65 31 65 54C65 77 36 78 36 100"/></g>
+<g fill="#F2CC73" fill-opacity=".5">${[0, 60, 120, 180, 240, 300].map(a => `<ellipse cx="36" cy="49.6" rx="2" ry="4" transform="rotate(${a} 36 54)"/>`).join('')}</g>
+<circle cx="36" cy="54" r="1.8" fill="#FFE7A3" fill-opacity=".7"/>
+${[[0, 0], [72, 0], [0, 108], [72, 108]].map(([x, y]) => `<g fill="#F2CC73" fill-opacity=".42">${[45, 135, 225, 315].map(a => `<ellipse cx="${x}" cy="${y - 4}" rx="1.7" ry="3.6" transform="rotate(${a} ${x} ${y})"/>`).join('')}</g><circle cx="${x}" cy="${y}" r="1.4" fill="#FFE7A3" fill-opacity=".6"/>`).join('')}
+${[[0, 54], [72, 54], [36, 0], [36, 108]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.6" fill="#FFF3CF" fill-opacity=".55"/>`).join('')}
+</svg>`;
+  const noise = `<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0"/></filter><rect width="100%" height="100%" filter="url(#n)" opacity=".5"/></svg>`;
+  const u = s => `url("data:image/svg+xml,${encodeURIComponent(s)}")`;
+  document.documentElement.style.setProperty('--jaal', u(jaal));
+  document.documentElement.style.setProperty('--noise', u(noise));
+})();
+
+(function sprite() {
+  const ring = (n, d, rx, ry, fill, off = 0, op = 1) => { let s = ''; for (let i = 0; i < n; i++) s += `<ellipse cx="0" cy="${-d}" rx="${rx}" ry="${ry}" transform="rotate(${f1(i * 360 / n + off)})"/>`; return `<g fill="${fill}" fill-opacity="${op}" stroke="#FFE1A0" stroke-opacity=".35" stroke-width=".35">${s}</g>`; };
+  const marigold = (id, g, dark, mid) => `<g id="${id}"><circle r="8.2" fill="url(#${g})"/>${ring(16, 6, 2.3, 3.1, dark, 0, .6)}${ring(12, 4, 2, 2.7, mid, 15, .75)}${ring(8, 2, 1.6, 2, dark, 0, .6)}<circle r="1.3" fill="${dark}"/></g>`;
+  const S = `<svg class="sprite" aria-hidden="true" focusable="false"><defs>
+<linearGradient id="zg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8F5E17"/><stop offset=".22" stop-color="#E3B75A"/><stop offset=".42" stop-color="#FFF1BF"/><stop offset=".6" stop-color="#D9A441"/><stop offset=".82" stop-color="#F3D27E"/><stop offset="1" stop-color="#8F5E17"/></linearGradient>
+<linearGradient id="zgb" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6B3F0C"/><stop offset=".45" stop-color="#F6E3A1"/><stop offset=".7" stop-color="#C9973A"/><stop offset="1" stop-color="#5A3608"/></linearGradient>
+<radialGradient id="zp" cx=".5" cy=".42" r=".7"><stop offset="0" stop-color="#FFFBF1"/><stop offset=".7" stop-color="#F9EEDA"/><stop offset="1" stop-color="#EEDDBD"/></radialGradient>
+<radialGradient id="mgo" cx=".42" cy=".38" r=".62"><stop offset="0" stop-color="#FFC857"/><stop offset=".55" stop-color="#F58A12"/><stop offset="1" stop-color="#B84705"/></radialGradient>
+<radialGradient id="mgy" cx=".42" cy=".38" r=".62"><stop offset="0" stop-color="#FFEB99"/><stop offset=".55" stop-color="#FBC21E"/><stop offset="1" stop-color="#C98306"/></radialGradient>
+<linearGradient id="lf" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1B5424"/><stop offset=".5" stop-color="#3E8B38"/><stop offset="1" stop-color="#123D19"/></linearGradient>
+<radialGradient id="mir" cx=".38" cy=".35" r=".7"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".5" stop-color="#DCE0E8"/><stop offset="1" stop-color="#7F8698"/></radialGradient>
+<radialGradient id="rub" cx=".38" cy=".35" r=".7"><stop offset="0" stop-color="#FF8A9A"/><stop offset=".45" stop-color="#C8102E"/><stop offset="1" stop-color="#4E0410"/></radialGradient>
+<radialGradient id="emr" cx=".38" cy=".35" r=".7"><stop offset="0" stop-color="#8CF0BC"/><stop offset=".45" stop-color="#0F7A4A"/><stop offset="1" stop-color="#03321D"/></radialGradient>
+<radialGradient id="prl" cx=".36" cy=".34" r=".7"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".6" stop-color="#F6EEDC"/><stop offset="1" stop-color="#B8A276"/></radialGradient>
+<linearGradient id="brs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE9A8"/><stop offset=".35" stop-color="#D9A441"/><stop offset=".75" stop-color="#9C6B1F"/><stop offset="1" stop-color="#5A3608"/></linearGradient>
+<radialGradient id="fla" cx=".5" cy=".8" r=".8"><stop offset="0" stop-color="#FFFBE0"/><stop offset=".3" stop-color="#FFD24A"/><stop offset=".72" stop-color="#FF8A1A"/><stop offset="1" stop-color="#E0400A"/></radialGradient>
+<radialGradient id="glw"><stop offset="0" stop-color="#FFC45A" stop-opacity=".55"/><stop offset=".45" stop-color="#FF9A2A" stop-opacity=".18"/><stop offset="1" stop-color="#FF9A2A" stop-opacity="0"/></radialGradient>
+${marigold('mgO', 'mgo', '#C45208', '#FF9B24')}
+${marigold('mgY', 'mgy', '#D48C05', '#FFD23F')}
+<g id="leaf"><path d="M0 0C6 8 7 21 0 36C-7 21-6 8 0 0Z" fill="url(#lf)"/><path d="M0 2V31" stroke="#9CCB72" stroke-width=".8" stroke-opacity=".55"/></g>
+<g id="tas"><circle r="3.2" fill="url(#brs)"/><path d="M-3 2.4L-4.2 17H4.2L3 2.4Z" fill="#B3122E"/><path d="M-2 4V16M0 4V17M2 4V16" stroke="#F0405A" stroke-width=".55"/><rect x="-3.6" y="3" width="7.2" height="2" rx="1" fill="#E3B75A"/></g>
+<g id="bud"><circle r="2.6" fill="url(#prl)"/></g>
+</defs></svg>`;
+  document.body.insertAdjacentHTML('afterbegin', S);
+})();
+
+/* zardozi mandala, centred on 0,0 */
+function petalRing(n, r0, r1, wk, attrs, off = 0) {
+  const h = r1 - r0, w = Math.PI * r0 / n * wk, d = `M${f1(-w)} 0Q${f1(-w)} ${f1(-h * .62)} 0 ${f1(-h)}Q${f1(w)} ${f1(-h * .62)} ${f1(w)} 0Z`;
+  let s = ''; for (let i = 0; i < n; i++) s += `<path d="${d}" transform="rotate(${f1(i * 360 / n + off)}) translate(0 ${f1(-r0)})"/>`;
+  return `<g ${attrs}>${s}</g>`;
+}
+function dotRing(r, gap, rad, fill) {
+  const n = Math.max(8, Math.round(2 * Math.PI * r / gap)); let s = '';
+  for (let i = 0; i < n; i++) { const a = i / n * 6.2832; s += `<circle cx="${f1(Math.cos(a) * r)}" cy="${f1(Math.sin(a) * r)}" r="${rad}"/>`; }
+  return `<g fill="${fill}">${s}</g>`;
+}
+function scallop(n, rb, attrs) {
+  let d = ''; const ch = 2 * rb * Math.sin(Math.PI / n), ar = f1(ch / 2 * 1.08);
+  for (let i = 0; i <= n; i++) { const a = i / n * 6.2832 - Math.PI / 2, x = f1(Math.cos(a) * rb), y = f1(Math.sin(a) * rb); d += i ? `A${ar} ${ar} 0 0 1 ${x} ${y}` : `M${x} ${y}`; }
+  return `<path d="${d}" ${attrs}/>`;
+}
+function stones(n, r, rad, off = 0) {
+  let s = ''; for (let i = 0; i < n; i++) { const a = (i / n + off) * 6.2832 - Math.PI / 2; s += `<circle cx="${f1(Math.cos(a) * r)}" cy="${f1(Math.sin(a) * r)}" r="${f1(rad)}" fill="url(#${i % 2 ? 'emr' : 'rub'})" stroke="#F3D27E" stroke-width="${f1(Math.max(.6, rad * .32))}"/>`; }
+  return s;
+}
+function mandala(R, full = true) {
+  const sw = Math.max(.8, R * .005);
+  let s = '';
+  if (full) {
+    s += petalRing(28, R * .8, R, .95, `fill="#E3B75A" fill-opacity=".09" stroke="url(#zg)" stroke-width="${f1(sw * 1.4)}"`);
+    s += petalRing(28, R * .82, R * .93, .5, `fill="none" stroke="#D9A441" stroke-opacity=".75" stroke-width="${f1(sw)}"`);
+    s += petalRing(28, R * .8, R * .89, .42, `fill="url(#zg)" fill-opacity=".85"`, 180 / 28);
+    s += dotRing(R * 1.025, R * .075, f1(R * .011), 'url(#prl)');
+    s += `<circle r="${f1(R * .79)}" fill="none" stroke="#E3B75A" stroke-width="${f1(sw * 1.6)}"/><circle r="${f1(R * .77)}" fill="none" stroke="#E3B75A" stroke-opacity=".6" stroke-width="${f1(sw * .7)}"/>`;
+    s += dotRing(R * .745, R * .026, f1(R * .0065), '#F6E3A1');
+  }
+  s += scallop(32, R * .62, `fill="rgba(30,2,8,.28)" stroke="url(#zg)" stroke-width="${f1(sw * 1.5)}"`);
+  s += stones(16, R * .665, R * .021);
+  s += petalRing(16, R * .4, R * .6, .95, `fill="url(#zg)" stroke="#7A4A0F" stroke-width="${f1(sw * .7)}"`);
+  s += petalRing(16, R * .43, R * .56, .45, `fill="#5C0A1A" fill-opacity=".72"`);
+  s += petalRing(16, R * .4, R * .53, .38, `fill="#F6E3A1" fill-opacity=".85"`, 180 / 16);
+  s += `<circle r="${f1(R * .39)}" fill="#2A030B" fill-opacity=".45" stroke="url(#zg)" stroke-width="${f1(sw * 2)}"/>`;
+  s += dotRing(R * .37, R * .03, f1(R * .007), '#F6E3A1');
+  s += petalRing(8, R * .13, R * .35, 1, `fill="url(#zg)" stroke="#7A4A0F" stroke-width="${f1(sw * .6)}"`);
+  s += petalRing(8, R * .13, R * .27, .7, `fill="#FFF1BF" fill-opacity=".9" stroke="#9C6B1F" stroke-width="${f1(sw * .5)}"`, 22.5);
+  s += dotRing(R * .115, R * .035, f1(R * .012), 'url(#prl)');
+  s += `<circle r="${f1(R * .075)}" fill="url(#rub)" stroke="#F3D27E" stroke-width="${f1(sw * 1.6)}"/>`;
+  return s;
+}
+
+/* marigold ladi (string), hanging from x,y0 */
+function ladi(x, y0, len, R, d = .5) {
+  let s = '', y = y0 + 5, i = 0;
+  s += `<path d="M${x} ${y0}V${f1(y0 + len)}" stroke="#E9C46A" stroke-width=".8" stroke-opacity=".7"/>`;
+  while (y < y0 + len - 8) {
+    if (i && i % 7 === 0) { s += `<use href="#leaf" transform="translate(${x} ${f1(y - 4)}) rotate(-38) scale(.36)"/><use href="#leaf" transform="translate(${x} ${f1(y - 4)}) rotate(38) scale(.36)"/><use href="#bud" transform="translate(${x} ${f1(y + 1)})"/>`; y += 9; }
+    else { s += `<use href="#${i % 3 === 2 ? 'mgY' : 'mgO'}" transform="translate(${f1(x + (R() - .5) * 1.2)} ${f1(y)}) rotate(${f1(R() * 90)}) scale(.78)"/>`; y += 12.2; }
+    i++;
+  }
+  s += `<use href="#tas" transform="translate(${x} ${f1(y)})"/>`;
+  return `<g class="ladi" style="--len:${f1(len)}px; --d:${d}s">${s}</g>`;
+}
+
+/* mango leaf and marigold toran with Gujarati mirror work */
+function toran(w, o = {}) {
+  const R = rng(o.seed || 7), bh = o.band || 16;
+  let leaves = '', swags = '', pend = '', band = '';
+  for (let x = 7, i = 0; x < w + 7; x += 14, i++) leaves += `<use href="#leaf" transform="translate(${f1(x)} ${bh - 3}) rotate(${f1((R() - .5) * 16)}) scale(${f1((i % 2 ? .72 : .92) + R() * .18)})"/>`;
+  const nH = Math.max(1, Math.round(w / (o.span || 200))), sp = w / nH, dip = o.dip || 32;
+  for (let k = 0; k < nH; k++) {
+    const x0 = k * sp, N = Math.max(8, Math.round(sp / 9.8));
+    for (let j = 0; j <= N; j++) { const t = j / N, x = x0 + sp * t, y = bh + 3 + 4 * dip * (1 - t) * t; swags += `<use href="#${j % 3 === 1 ? 'mgY' : 'mgO'}" transform="translate(${f1(x)} ${f1(y)}) rotate(${f1(R() * 90)}) scale(.7)"/>`; }
+  }
+  for (let k = 0; k <= nH; k++) {
+    const x = f1(Math.min(w - 8, Math.max(8, k * sp))); let y = bh + 6;
+    for (let j = 0; j < 3; j++) { pend += `<use href="#${j === 1 ? 'mgY' : 'mgO'}" transform="translate(${x} ${f1(y)}) rotate(${f1(R() * 90)}) scale(.74)"/>`; y += 11.5; }
+    pend += `<use href="#tas" transform="translate(${x} ${f1(y - 2)})"/>`;
+  }
+  band += `<rect x="0" y="0" width="${w}" height="${bh}" fill="#2E030C"/><rect x="0" y="0" width="${w}" height="2" fill="#E3B75A"/><rect x="0" y="${bh - 2}" width="${w}" height="2" fill="#C9973A"/>`;
+  let m = ''; for (let x = 11; x < w; x += 22) m += `<circle cx="${x}" cy="${bh / 2}" r="${f1(bh * .2)}" fill="url(#mir)" stroke="#E3B75A" stroke-width=".9"/><circle cx="${x + 11}" cy="${bh / 2}" r=".9" fill="#F6E3A1"/>`;
+  band += m;
+  return `<g class="tor">${leaves}${swags}${pend}${band}</g>`;
+}
+
+/* brass diya */
+function diya(cx, cy, s, i) {
+  return `<g transform="translate(${f1(cx)} ${f1(cy)}) scale(${s})">
+<ellipse cx="2" cy="14" rx="30" ry="4" fill="#000" fill-opacity=".45"/>
+<path d="M-8 13H10L6.5 6H-4.5Z" fill="url(#brs)"/>
+<path d="M-27 -5C-25 8-9 10 3 8.5C15 7 25 1 33 -8C22 -6.5 10 -6.5 0 -6.5C-12 -6.5-22 -6.8-27 -5Z" fill="url(#brs)"/>
+<path d="M-25 -5.3C-14 -8.5 10 -9 31 -8.2C18 -5 -10 -3.8-25 -5.3Z" fill="#4A2205"/>
+<g fill="#FFF1BF" fill-opacity=".85"><circle cx="-16" cy="1.5" r="1"/><circle cx="-8" cy="3.2" r="1"/><circle cx="0" cy="3.4" r="1"/><circle cx="8" cy="2.4" r="1"/><circle cx="15" cy=".2" r="1"/></g>
+<path d="M-20 -1.5C-10 1.5 10 1.5 22 -3" fill="none" stroke="#FFE9A8" stroke-opacity=".55" stroke-width=".8"/>
+<g class="flame"><circle class="gl" cx="30" cy="-22" r="30" fill="url(#glw)" style="animation-delay:${-i * .37}s"/><path class="fl" style="animation-delay:${-i * .41}s" d="M30 -9C24 -14 25 -23 30.5 -35C35.5 -23 36 -14 30 -9Z" fill="url(#fla)"/><path class="fl" style="animation-delay:${-i * .41}s" d="M30 -10.5C28 -13.5 28.3 -18 30.3 -23C32.2 -18 32.4 -13.5 30 -10.5Z" fill="#FFF8DC"/></g>
+</g>`;
+}
+
+/* ogee (Mughal) arch path through a box */
+function archPath(x0, x1, spring, head, bottom) {
+  const W = x1 - x0, mid = (x0 + x1) / 2, a = spring - head;
+  return `M${f1(x0)} ${f1(bottom)}V${f1(spring)}C${f1(x0)} ${f1(spring - head * .48)} ${f1(x0 + W * .28)} ${f1(spring - head * .65)} ${f1(mid)} ${f1(a)}C${f1(x1 - W * .28)} ${f1(spring - head * .65)} ${f1(x1)} ${f1(spring - head * .48)} ${f1(x1)} ${f1(spring)}V${f1(bottom)}Z`;
+}
+
+/* =====================================================================
+   HAVELI INTRO: velvet doors open onto the celebration
+   ===================================================================== */
+const Intro = (() => {
+  const el = $('#intro'); let done = false;
+  function build() {
+    const W = innerWidth, H = innerHeight, w = W / 2, mob = W < 600;
+    const MR = Math.min(Math.max(W * .5, H * .36), H * .48) * .96;
+    const door = side => {
+      const sx = side === 'l' ? w : 0, ox = side === 'l' ? 10 : w - 10;
+      let s = `<g transform="translate(${f1(sx)} ${f1(H / 2)})"><g class="mand">${mandala(MR)}</g></g>`;
+      s += `<rect x="10" y="10" width="${f1(w - 20)}" height="${f1(H - 20)}" fill="none" stroke="url(#zg)" stroke-width="2.4"/>`;
+      s += `<rect x="15" y="15" width="${f1(w - 30)}" height="${f1(H - 30)}" fill="none" stroke="#E3B75A" stroke-width="2.2" stroke-dasharray="0 6.5" stroke-linecap="round"/>`;
+      s += `<rect x="20" y="20" width="${f1(w - 40)}" height="${f1(H - 40)}" fill="none" stroke="#C9973A" stroke-opacity=".8" stroke-width=".8"/>`;
+      s += `<g transform="translate(${ox} ${f1(H - 10)})">${mandala(22, false)}</g>`;
+      s += side === 'l' ? `<rect x="${f1(w - 6)}" y="0" width="6" height="${H}" fill="url(#zgb)"/><rect x="${f1(w - 1)}" y="0" width="1" height="${H}" fill="#1A0206"/>` : `<rect x="0" y="0" width="6" height="${H}" fill="url(#zgb)"/><rect x="0" y="0" width="1" height="${H}" fill="#1A0206"/>`;
+      return s;
+    };
+    [['#dL', 'l'], ['#dR', 'r']].forEach(([id, sd]) => { const v = $(id); v.setAttribute('viewBox', `0 0 ${f1(w)} ${H}`); v.innerHTML = door(sd); });
+    const R = rng(13), D = $('#iDecor'); D.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    let lad = '';
+    const L1 = H * (mob ? .5 : .62), L2 = H * (mob ? .34 : .44);
+    lad += ladi(16, 14, L1, R, .55) + ladi(W - 16, 14, L1, R, .6);
+    lad += ladi(mob ? 36 : 42, 14, L2, R, .75) + ladi(W - (mob ? 36 : 42), 14, L2, R, .8);
+    if (!mob) lad += ladi(68, 14, H * .3, R, .95) + ladi(W - 68, 14, H * .3, R, 1);
+    const n = W < 600 ? 4 : W < 1000 ? 5 : 7, ds = H < 520 ? .8 : mob ? .78 : 1.15; let di = '';
+    for (let i = 0; i < n; i++) di += diya(W * (.12 + .76 * i / (n - 1)) - 4 * ds, H - 22 * ds, ds, i);
+    D.innerHTML = lad + toran(W, { seed: 5, band: mob ? 15 : 17, dip: mob ? 26 : 34, span: mob ? 130 : 210 }) + `<g class="diyas">${di}</g>`;
+    let co = `<g transform="translate(180 300)" opacity=".2">${petalRing(24, 64, 132, .92, 'fill="none" stroke="#B8862B" stroke-width="1"')}${petalRing(24, 70, 118, .45, 'fill="#E3B75A" fill-opacity=".35"', 7.5)}<circle r="62" fill="none" stroke="#B8862B" stroke-width="1.2"/>${dotRing(56, 7, 1.3, '#B8862B')}${petalRing(12, 14, 50, .95, 'fill="none" stroke="#B8862B" stroke-width="1"')}</g>`;
+    [[34, 466], [326, 466]].forEach(([x, y]) => { co += `<g transform="translate(${x} ${y})">${mandala(15, false)}</g>`; });
+    co += `<circle cx="34" cy="182" r="3.2" fill="url(#rub)" stroke="#F3D27E" stroke-width=".9"/><circle cx="326" cy="182" r="3.2" fill="url(#rub)" stroke="#F3D27E" stroke-width=".9"/><circle cx="180" cy="44" r="3.4" fill="url(#emr)" stroke="#F3D27E" stroke-width=".9"/>`;
+    $('#cardOrn').innerHTML = co;
+  }
+  function open() {
+    if (done) return; done = true; Snd.start(); Snd.bell();
+    el.classList.add('open');
+    document.body.classList.remove('locked');
+    Hero.reveal();
+    setTimeout(() => { el.classList.add('gone'); }, RM ? 50 : 1900);
+    setTimeout(() => el.remove(), RM ? 600 : 2500);
+  }
+  function init() {
+    build();
+    setTimeout(() => { el.classList.add('ready'); $('#openBtn').focus({ preventScroll: true }); }, RM ? 0 : 1500);
+    $('#openBtn').addEventListener('click', open);
+    let rt; addEventListener('resize', () => { if (done) return; clearTimeout(rt); rt = setTimeout(build, 200); });
+  }
+  return { init };
+})();
+
+/* =====================================================================
+   HERO: velvet jharokha panel, countdown
+   ===================================================================== */
+const Hero = (() => {
+  const home = $('#home'), zp = $('#zari'), sv = $('#zSvg');
+  function draw() {
+    const r = zp.getBoundingClientRect(), W = Math.round(r.width), H = Math.round(r.height); if (!W || !H) return;
+    sv.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    if (H < 160) { sv.innerHTML = toran(W, { seed: 9, band: 14, dip: 24, span: 130 }); return; }
+    const R = rng(4), x0 = 38, x1 = W - 38, head = (x1 - x0) * .5, spring = 120 + head, bot = H - 38;
+    const vis = Math.min(H, innerHeight), MR = Math.min((x1 - x0) * .45, (vis - spring + head) * .34), cy = Math.max(spring + 10, Math.min(bot - MR - 20, vis * .57));
+    let s = `<path d="${archPath(x0, x1, spring, head, bot)}" fill="#1F0208" fill-opacity=".35" stroke="url(#zg)" stroke-width="2.4"/>`;
+    s += `<path d="${archPath(x0 + 8, x1 - 8, spring + 3, head - 8, bot - 8)}" fill="none" stroke="#E3B75A" stroke-width="2.2" stroke-dasharray="0 6.5" stroke-linecap="round"/>`;
+    s += `<path d="${archPath(x0 + 15, x1 - 15, spring + 6, head - 15, bot - 15)}" fill="none" stroke="#C9973A" stroke-opacity=".8" stroke-width=".8"/>`;
+    s += `<g transform="translate(${f1(W / 2)} ${f1(cy)})"><g class="mand">${mandala(MR)}</g></g>`;
+    s += `<g transform="translate(${x0 + 15} ${bot - 15})">${mandala(16, false)}</g><g transform="translate(${x1 - 15} ${bot - 15})">${mandala(16, false)}</g>`;
+    s += `<circle cx="${f1(W / 2)}" cy="${f1(spring - head + 22)}" r="4" fill="url(#emr)" stroke="#F3D27E" stroke-width="1"/>`;
+    s += ladi(14, 14, H * .5, R, .5) + ladi(W - 14, 14, H * .5, R, .55);
+    s += toran(W, { seed: 3, band: 16, dip: 30, span: 170 });
+    sv.innerHTML = s;
+  }
+  function reveal() {
+    opened = true; zp.classList.remove('in'); void zp.offsetWidth; zp.classList.add('in');
+    setTimeout(() => { FX.rain(RM ? 10 : 80); $('#nav').classList.add('show'); }, RM ? 0 : 1100);
+  }
+  function countdown() {
+    const T = new Date(C.weddingISO).getTime(), el = ['#cdD', '#cdH', '#cdM', '#cdS'].map(s => $(s)), pad = n => String(n).padStart(2, '0');
+    const upd = () => { let ms = Math.max(0, T - Date.now()); const D = Math.floor(ms / 864e5); ms -= D * 864e5; const h = Math.floor(ms / 36e5); ms -= h * 36e5; const m = Math.floor(ms / 6e4), s = Math.floor((ms - m * 6e4) / 1000);
+      [D, h, m, s].forEach((v, i) => { const t = pad(v); if (el[i].textContent !== t) el[i].textContent = t; }); };
+    upd(); setInterval(upd, 1000);
+  }
+  function init() {
+    draw(); let rt, lw = innerWidth; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (innerWidth !== lw || innerWidth >= 960) { lw = innerWidth; draw(); } }, 200); });
+    countdown();
+    home.addEventListener('pointermove', e => { const r = home.getBoundingClientRect(); home.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%'); home.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%'); });
+  }
+  return { init, reveal };
+})();
+
+
+/* =====================================================================
+   CHAPTERS: the four celebrations and their parampara
+   ===================================================================== */
+function calUrl(e, venue) {
+  const f = iso => new Date(iso).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+  return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(e.en + ', ' + C.couple + "'s wedding") + '&dates=' + f(e.start) + '/' + f(e.end) + (venue ? '&location=' + encodeURIComponent(venue) : '') + '&details=' + encodeURIComponent('Shubh lagna of ' + C.couple);
+}
+const IC_CAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>';
+const IC_PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>';
+function buildChapters() {
+  EV.forEach((e, k) => {
+    const sec = $('#' + e.id), venue = C.venue[e.id];
+    const grid = pixelMotif(MOTIFS[e.motif]);
+    const rites = e.rites.map((r, i) => `<li><span class="mk" aria-hidden="true">${e.seq ? i + 1 : ''}</span><div><p class="rg" lang="gu">${r[0]}</p><p class="re">${r[1]}</p><p class="rd">${r[2]}</p></div></li>`).join('');
+    const extra = e.id === 'garba' ? `<p class="ny">Countdown to 2027 <b id="nyT">00:00:00</b></p><p class="fw-hint">Tap anywhere here to light a firework.</p>` : '';
+    sec.insertAdjacentHTML('beforeend', `<div class="ch-in wrap">
+      <header class="ch-hd">
+        <p class="ch-no" aria-hidden="true">${e.no}</p>
+        <h2 id="h-${e.id}"><span class="gu" lang="gu">${e.gu}</span><span class="en">${e.en}</span></h2>
+        <p class="ch-lede">${e.lede}</p>
+        <div class="when"><span class="dd">${e.dd}</span><span class="mm">${e.mm}<b>${e.wk}</b></span></div>
+        <p class="venue">${venue ? venue : 'Venue details will be shared soon'}</p>
+        <div class="acts"><a class="btn line" href="${calUrl(e, venue)}" target="_blank" rel="noopener">${IC_CAL}Add to calendar</a>${venue ? `<a class="btn line" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue)}" target="_blank" rel="noopener">${IC_PIN}Directions</a>` : ''}</div>
+        ${extra}
+      </header>
+      <div class="ch-body">
+        <figure class="fig"><div class="swatch" style="--latimg:url(${latURL(e.pal)})"><div class="sw-in"><svg class="motif" viewBox="0 0 40 40" role="img" aria-label="${e.cap}">${motifSVG(grid, 7 + k)}</svg></div></div><figcaption>${e.cap}</figcaption></figure>
+        <h3 class="rt"><span class="gu" lang="gu">પરંપરા</span><span class="en">The rituals of the ${e.id === 'puja' ? 'morning' : e.id === 'lagna' ? 'wedding' : 'evening'}</span></h3>
+        <ol class="rites${e.seq ? ' seq' : ''}">${rites}</ol>
+      </div>
+    </div>`);
+  });
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('on'); io.unobserve(en.target); } }), { threshold: 0.35 });
+  $$('.swatch').forEach(s => io.observe(s));
+  $$('.kinar').forEach(k => k.style.setProperty('--k', `url(${kinarURL(k.dataset.p || 'red')})`));
+  $$('.day').forEach(d => d.style.setProperty('--k', `url(${kinarURL(d.dataset.k || 'red')})`));
+}
+const Lagna = (() => {
+  let list, items;
+  function update() {
+    if (!list) { list = $('#lagna .rites'); items = list ? $$('li', list) : []; if (!list) return; }
+    const r = list.getBoundingClientRect(), vh = innerHeight; if (r.bottom < -100 || r.top > vh + 100) return;
+    const line = vh * 0.62, p = clamp((line - r.top - 16) / (r.height - 32), 0, 1);
+    list.style.setProperty('--p', p.toFixed(4));
+    items.forEach(li => li.classList.toggle('done', li.getBoundingClientRect().top + 16 < line));
+  }
+  return { update };
+})();
+
+/* =====================================================================
+   GARBA: pixel fireworks for New Year's Eve
+   ===================================================================== */
+const Fireworks = (() => {
+  const sec = $('#garba'), cv = $('#fw'), ctx = cv.getContext('2d'); let W, H, vis = false, raf = 0, last = 0, nextAuto = 0; const RK = [], P = [];
+  const COLS = ['#E9AE2A', '#F6E3A1', '#FF5FA2', '#3FBF5A', '#FF8A1A', '#8FD3FF', '#FFFFFF'];
+  function size() { const d = Math.min(1.5, devicePixelRatio || 1); W = sec.clientWidth; H = sec.clientHeight; cv.width = Math.round(W * d); cv.height = Math.round(H * d); ctx.setTransform(d, 0, 0, d, 0, 0); }
+  function view() { const r = sec.getBoundingClientRect(); return [Math.max(0, -r.top), Math.min(H, innerHeight - r.top)]; }
+  function launch(x, ty) { const [, vb] = view(), y0 = Math.min(H, vb + 10); ty = Math.min(ty, y0 - 80); RK.push({ x, y: y0, vy: -Math.sqrt(2 * 520 * Math.max(60, y0 - ty)), c: COLS[Math.floor(Math.random() * COLS.length)] }); wake(); }
+  function explode(x, y, c) {
+    const n = RM ? 20 : 80, c2 = COLS[Math.floor(Math.random() * COLS.length)];
+    for (let i = 0; i < n; i++) { const a = rnd(0, 6.283), s = rnd(50, 250) * (i % 5 === 0 ? 0.5 : 1); P.push({ x, y, vx: Math.cos(a) * s, vy: Math.sin(a) * s, life: 0, max: rnd(1.1, 2), c: i % 3 ? c : c2 }); }
+    Snd.pop();
+  }
+  function wake() { if (!raf) { last = 0; raf = requestAnimationFrame(tick); } }
+  function tick(now) {
+    const dt = last ? Math.min(0.05, (now - last) / 1000) : 0.016; last = now; ctx.clearRect(0, 0, W, H);
+    if (vis && !RM && now > nextAuto) { const [vt, vb] = view(); if (vb - vt > 200) launch(rnd(W * 0.12, W * 0.88), rnd(vt + 60, vt + (vb - vt) * 0.45)); nextAuto = now + rnd(1300, 2300); }
+    for (let i = RK.length - 1; i >= 0; i--) { const k = RK[i]; k.vy += 520 * dt; k.y += k.vy * dt; ctx.fillStyle = '#FFE9A8'; ctx.fillRect(k.x - 1, k.y, 2, 7); ctx.fillStyle = 'rgba(255,200,120,.35)'; ctx.fillRect(k.x - 1, k.y + 7, 2, 12); if (k.vy >= -20) { explode(k.x, k.y, k.c); RK.splice(i, 1); } }
+    for (let i = P.length - 1; i >= 0; i--) { const p = P[i]; p.life += dt; if (p.life > p.max) { P.splice(i, 1); continue; } p.vx *= 0.982; p.vy = p.vy * 0.982 + 70 * dt; p.x += p.vx * dt; p.y += p.vy * dt;
+      const a = 1 - p.life / p.max; ctx.globalAlpha = a * (0.6 + 0.4 * Math.sin(p.life * 30 + i)); ctx.fillStyle = p.c; ctx.fillRect(p.x - 1.6, p.y - 1.6, 3.2, 3.2); ctx.globalAlpha = 1; }
+    if (vis || RK.length || P.length) raf = requestAnimationFrame(tick); else { raf = 0; ctx.clearRect(0, 0, W, H); }
+  }
+  function nyCountdown() {
+    const T = new Date(C.newYearISO).getTime(), el = $('#nyT'), pad = n => String(n).padStart(2, '0');
+    const upd = () => { let ms = Math.max(0, T - Date.now()); const D = Math.floor(ms / 864e5); ms -= D * 864e5; const h = Math.floor(ms / 36e5); ms -= h * 36e5; const m = Math.floor(ms / 6e4), s = Math.floor((ms - m * 6e4) / 1000);
+      el.textContent = ms <= 0 && D === 0 ? 'Happy New Year!' : `${D} days ${pad(h)}:${pad(m)}:${pad(s)}`; };
+    upd(); setInterval(upd, 1000);
+  }
+  function init() {
+    size(); let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(size, 200); });
+    new IntersectionObserver(es => es.forEach(e => { vis = e.isIntersecting; if (vis) wake(); }), { threshold: 0.05 }).observe(sec);
+    sec.addEventListener('pointerdown', e => { if (e.target.closest('a,button')) return; Snd.init(); const r = sec.getBoundingClientRect(); launch(e.clientX - r.left, e.clientY - r.top); });
+    nyCountdown();
+  }
+  return { init };
+})();
+
+/* =====================================================================
+   KANKOTRI LANGUAGE + RSVP
+   ===================================================================== */
+function buildKankotri() {
+  const btns = $$('.lang button');
+  btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(x => x.setAttribute('aria-pressed', x === b));
+    $$('.kt').forEach(k => k.hidden = k.dataset.l !== b.dataset.l);
+  }));
+}
+function buildRsvp() {
+  const f = $('#rForm'), name = $('#rName'), send = $('#rSend'), err = $('#rErr'); let n = 2;
+  const val = nm => { const x = f.querySelector(`input[name="${nm}"]:checked`); return x ? x.value : ''; };
+  function text() {
+    const yes = val('come') === 'yes', evs = $$('input[name="ev"]:checked', f).map(x => x.value), m = $('#rMsg').value.trim();
+    const L = [`🙏 Jai Mataji! RSVP for ${C.couple}'s wedding`, `Name: ${name.value.trim()}`, `Family or friend of: ${val('side') === 'groom' ? 'Valay' : 'Ayushi'}`];
+    if (yes) L.push(`Coming: Yes, ${n} ${n === 1 ? 'person' : 'people'}`, `Celebrations: ${evs.length ? evs.join(', ') : 'Not sure yet'}`, `Food: ${val('food')}`);
+    else L.push("Coming: Sorry, we can't make it. Our blessings are with you.");
+    if (m) L.push(`Blessing: ${m}`);
+    return L.join('\n');
+  }
+  function url() { const ph = C.rsvp[val('side') === 'groom' ? 'groom' : 'bride']; return (ph ? 'https://wa.me/' + ph : 'https://wa.me/') + '?text=' + encodeURIComponent(text()); }
+  function refresh() { const no = val('come') === 'no'; f.classList.toggle('nocome', no); send.href = url(); $('#rSendT').textContent = no ? 'Send my blessings on WhatsApp' : 'Send RSVP on WhatsApp'; }
+  f.addEventListener('input', refresh); f.addEventListener('change', refresh); f.addEventListener('submit', e => e.preventDefault());
+  $('#cMinus').addEventListener('click', () => { n = Math.max(1, n - 1); $('#rCount').textContent = n; refresh(); });
+  $('#cPlus').addEventListener('click', () => { n = Math.min(30, n + 1); $('#rCount').textContent = n; refresh(); });
+  name.addEventListener('input', () => { if (name.value.trim()) err.textContent = ''; });
+  send.addEventListener('click', e => {
+    if (!name.value.trim()) { e.preventDefault(); err.textContent = 'Add your name so the family knows who is coming.'; name.focus(); return; }
+    err.textContent = ''; refresh();
+    const st = $('#stamp'); st.classList.remove('on'); void st.getBoundingClientRect(); st.classList.add('on');
+    const r = send.getBoundingClientRect(); FX.burst(r.left + r.width / 2, r.top, 80, ['akshat', 'akshat', 'kumkum', 'petal']); Snd.chord();
+    $('#rAgain').href = send.href; $('#rDoneT').textContent = val('come') === 'yes' ? 'Your RSVP is ready in WhatsApp. Tap send there and the family will receive it.' : 'Your message is ready in WhatsApp. Tap send there. Thank you for your blessings.';
+    setTimeout(() => { send.hidden = true; $('#rDone').hidden = false; }, 400);
+  });
+  $('#rEdit').addEventListener('click', () => { $('#rDone').hidden = true; send.hidden = false; name.focus(); });
+  refresh();
+}
+
+/* =====================================================================
+   NAV + SOUND
+   ===================================================================== */
+function buildNav() {
+  const links = $$('#nav a');
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.dataset.s === e.target.id)); }), { rootMargin: '-45% 0px -50% 0px' });
+  ['home', 'mehndi', 'puja', 'garba', 'lagna', 'rsvp'].forEach(id => io.observe($('#' + id)));
+  const b = $('#snd');
+  b.addEventListener('click', () => { if (Snd.on) { Snd.stop(); b.classList.add('muted'); b.setAttribute('aria-pressed', 'true'); b.setAttribute('aria-label', 'Play music'); } else { Snd.start(); b.classList.remove('muted'); b.setAttribute('aria-pressed', 'false'); b.setAttribute('aria-label', 'Mute music'); } });
+}
+
+/* =====================================================================
+   BOOT
+   ===================================================================== */
+buildChapters(); Hero.init(); buildKankotri(); buildRsvp(); buildNav(); Fireworks.init(); Intro.init();
+let ls = -1;
+(function loop() { if (scrollY !== ls) { ls = scrollY; Lagna.update(); } requestAnimationFrame(loop); })();
+addEventListener('resize', () => { ls = -1; });
+})();
+</script>
+</body>
+</html>
