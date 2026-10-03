@@ -493,6 +493,9 @@ footer .tag{font-size:clamp(1.5rem,6.4vw,2.3rem); font-style:italic; margin-top:
   main #home .hero-in{min-height:0; padding-bottom:0}
   #nimantran{padding-top:44px}
 }
+#patrika .hint span{font-family:var(--guj); font-style:normal; font-weight:600}
+#patrika .hint{line-height:1.7}
+.kt[data-l="en"] .k-nm{font-optical-sizing:none; font-variation-settings:"opsz" 12; font-weight:600; -webkit-text-stroke:.008em currentColor; paint-order:stroke fill}
 </style>
 </head>
 <body class="locked">
@@ -574,7 +577,7 @@ footer .tag{font-size:clamp(1.5rem,6.4vw,2.3rem); font-style:italic; margin-top:
             <p class="k-join">with</p>
             <p class="k-nm">Valay</p>
             <p class="k-par"><small>son of</small><span>Shri Ajaykumar Ramjibhai Patel</span><span>Smt. Mayaben Ajaykumar Patel</span></p>
-            <p class="k-join">has been blessed and fixed for Friday, 1 January 2027<br>(Samvat 2083, Magshar Vad 9).</p>
+            <p class="k-join">has been blessed and fixed for Friday,<br><span style="white-space:nowrap">1 January, 2027</span><br><span style="white-space:nowrap">(Samvat 2083, Magshar Vad 9).</span></p>
             <p class="k-inv">We warmly invite you and your family to join us on this auspicious occasion and bless the newlyweds.</p>
             <p class="k-li">With love, the Patel families</p>
           </div>
@@ -582,7 +585,7 @@ footer .tag{font-size:clamp(1.5rem,6.4vw,2.3rem); font-style:italic; margin-top:
         <div class="kinar" data-p="red" aria-hidden="true"></div>
         </div></div>
         <div class="bundle" id="bundle" aria-hidden="true"><i></i><b class="pull"></b></div>
-        <p class="hint" id="pHint" aria-live="polite">Tap the seal to open</p>
+        <p class="hint" id="pHint" aria-live="polite"><span lang="gu">પધારો, કંકોત્રી ખોલો</span><br>Welcome, open the kankotri</p>
         <button class="reroll" id="reroll" type="button">Roll it up and seal it again</button>
       </article>
 
@@ -1344,7 +1347,7 @@ addEventListener('resize', () => { ls = -1; });
     clearTimeout(t); p.classList.remove('done', 'drag'); roll.style.height = roll.offsetHeight + 'px'; void roll.offsetHeight;
     roll.style.transitionDuration = bun.style.transitionDuration = rm ? '0s' : '1s'; p.classList.add('rolling'); p.classList.remove('open'); p.style.removeProperty('--d'); roll.style.height = '0px'; h = 0;
     p.scrollIntoView({ behavior: rm ? 'auto' : 'smooth', block: 'center' });
-    t = setTimeout(() => { p.classList.remove('rolling', 'untie'); roll.style.transitionDuration = bun.style.transitionDuration = ''; hint.textContent = 'Tap the seal to open'; state = 'locked'; }, rm ? 0 : 1050);
+    t = setTimeout(() => { p.classList.remove('rolling', 'untie'); roll.style.transitionDuration = bun.style.transitionDuration = ''; hint.innerHTML = '<span lang=\"gu\">પધારો, કંકોત્રી ખોલો</span><br>Welcome, open the kankotri'; state = 'locked'; }, rm ? 0 : 1050);
   }
   tie.addEventListener('click', unseal);
   /* safety net: if a guest scrolls past without tapping, break the seal for them */
