@@ -498,6 +498,16 @@ footer .tag{font-size:clamp(1.5rem,6.4vw,2.3rem); font-style:italic; margin-top:
 #patrika .hint span{font-family:var(--guj); font-style:normal; font-weight:600}
 #patrika .hint{line-height:1.7}
 .kt[data-l="en"] .k-nm{font-optical-sizing:none; font-variation-settings:"opsz" 12; font-weight:600; -webkit-text-stroke:.008em currentColor; paint-order:stroke fill}
+.cov .fam{letter-spacing:.08em; line-height:1.55; top:calc(100% + var(--gap,90px) * .5 - 1.5em)}
+.kank .k-li{font-size:1.05em; line-height:1.6}
+footer .fam{font-size:clamp(1.3rem,5.6vw,1.9rem); line-height:1.5}
+.dslip{width:min(300px,100%); margin:22px 0 6px; background:#F7EFDF; border-radius:6px; padding:16px 18px; text-align:center; box-shadow:0 12px 24px rgba(0,0,0,.35); outline:1px solid #C9973A; outline-offset:-6px; transform:rotate(-1.5deg)}
+.dslip p{margin:0}
+.dslip .g{font-family:var(--guj); font-weight:700; font-size:1.3rem; color:#7E0C21}
+.dslip .s{font-style:italic; font-size:.92rem; color:#4A2A12; margin:4px 0 8px}
+.dslip .t{font-weight:600; font-size:1.02rem; letter-spacing:.08em; text-transform:uppercase; color:#7E0C21}
+@media (max-width:959px){.dslip{margin-inline:auto}}
+.ch-body .dslip{margin:26px auto 30px}
 </style>
 </head>
 <body class="locked">
@@ -514,7 +524,7 @@ footer .tag{font-size:clamp(1.5rem,6.4vw,2.3rem); font-style:italic; margin-top:
     <p class="c3" style="--o:4"><span class="foil">Ayushi</span><i>weds</i><span class="foil">Valay</span></p>
     <p class="c4" style="--o:5" aria-label="29 December 2026 to 1 January 2027"><b>29.12.2026</b><em>to</em><b>01.01.2027</b></p>
     <button class="btn" style="--o:6" id="openBtn" type="button"><span>Open the invitation</span><b aria-hidden="true">&rarr;</b></button>
-    <p class="fam" style="--o:7" lang="gu">પટેલ પરિવાર</p>
+    <p class="fam" style="--o:7" lang="gu">સ્વ. સોમદાસ ઈશ્વરદાસ<br>પટેલ પરિવાર (ડાંગરવા)</p>
   </div>
 </div>
 
@@ -563,13 +573,13 @@ footer .tag{font-size:clamp(1.5rem,6.4vw,2.3rem); font-style:italic; margin-top:
             <p class="k-hd">॥ શ્રી ગણેશાય નમઃ ॥</p>
             <p class="k-kd">સહર્ષ ખુશાલી સાથ જણાવવાનું કે અમારા કુળદેવી શ્રી ઉમિયા માતાજી તથા શ્રી ખોડિયાર માતાજીની અસીમ કૃપાથી</p>
             <p class="k-par first"><span>શ્રી ચિરાગકુમાર દશરથભાઈ પટેલ</span><span>શ્રીમતી ધર્મિષ્ઠાબેન ચિરાગકુમાર પટેલ</span><small>ના સુપુત્રી</small></p>
-            <p class="k-nm"><small>ચિ.</small>આયુષી</p>
+            <p class="k-nm"><small>ચિ.</small>આયુષિ</p>
             <p class="k-join">ના શુભ લગ્ન</p>
             <p class="k-nm"><small>ચિ.</small>વલય</p>
             <p class="k-par"><small>સુપુત્ર</small><span>શ્રી અજયકુમાર રામજીભાઈ પટેલ</span><span>શ્રીમતી માયાબેન અજયકુમાર પટેલ</span></p>
             <p class="k-join" style="font-size:.9em;text-wrap:balance">સાથે સંવત ૨૦૮૩ના માગશર વદ-૯ને શુક્રવાર તા. ૦૧-૦૧-૨૦૨૭ના શુભ દિવસે નિર્ધાર્યા છે.</p>
             <p class="k-inv">આ મંગલ પ્રસંગે આપ સહકુટુંબ પધારી નવદંપતીને આશીર્વાદ આપશો એવી અમારી ભાવભરી વિનંતી છે.</p>
-            <p class="k-li">લિ. પટેલ પરિવાર</p>
+            <p class="k-li">લિ. સ્વ. સોમદાસ ઈશ્વરદાસ<br>પટેલ પરિવાર (ડાંગરવા)</p>
           </div>
           <div class="kt" data-l="en" lang="en" hidden>
             <p class="k-hd" lang="gu">॥ શ્રી ગણેશાય નમઃ ॥</p>
@@ -615,7 +625,7 @@ footer .tag{font-size:clamp(1.5rem,6.4vw,2.3rem); font-style:italic; margin-top:
   <div class="kinar" data-p="red" aria-hidden="true"></div>
   <div class="fin">
     <p class="li" lang="gu">લિ.</p>
-    <p class="fam" lang="gu">પટેલ પરિવાર</p>
+    <p class="fam" lang="gu">સ્વ. સોમદાસ ઈશ્વરદાસ<br>પટેલ પરિવાર (ડાંગરવા)</p>
     <p class="fe">With love, the Patel families</p>
     <p class="tag">#AyushiWedsValay</p>
   </div>
@@ -647,10 +657,10 @@ const C = {
   newYearISO: '2027-01-01T00:00:00+05:30',
   rsvp: { phone: '' },
   venue: {
-    mehndi: { name: "Ayushi's House",               map: 'https://maps.app.goo.gl/S6ZJoTJa2FFHXJGw7' },
-    puja:   { name: "Ayushi's House",               map: 'https://maps.app.goo.gl/S6ZJoTJa2FFHXJGw7' },
+    mehndi: { name: 'A-14 Paramsukh Society, Ranip, Ahmedabad, Gujarat 382480',               map: 'https://maps.app.goo.gl/S6ZJoTJa2FFHXJGw7' },
+    puja:   { name: 'A-14 Paramsukh Society, Ranip, Ahmedabad, Gujarat 382480',               map: 'https://maps.app.goo.gl/S6ZJoTJa2FFHXJGw7' },
     garba:  { name: 'Hari Mandap, Anand',           map: 'https://share.google/9Lt3q0XBzffvpTqkn' },
-    lagna:  { name: 'Kamuba Party Plot, Ahmedabad', map: 'https://maps.app.goo.gl/zQgNx1N9QxxsHN4N7' }
+    lagna:  { name: 'Kamuba Party Plot, New Ranip, Ahmedabad 382470, Gujarat', map: 'https://maps.app.goo.gl/zQgNx1N9QxxsHN4N7' }
   }
 };
 const EV = [
@@ -1181,20 +1191,21 @@ function buildChapters() {
     const sec = $('#' + e.id), venue = C.venue[e.id];
     const grid = pixelMotif(MOTIFS[e.motif]);
     const rites = e.rites.map((r, i) => `<li><span class="mk" aria-hidden="true">${e.seq ? i + 1 : ''}</span><div><p class="rg" lang="gu">${r[0]}</p><p class="re">${r[1]}</p><p class="rd">${r[2]}</p></div></li>`).join('');
-    const extra = e.id === 'garba' ? '' : '';
+    const DSL = { mehndi: ['dinner', '6:00 pm onwards'], puja: ['lunch', '11:00 am onwards'], garba: ['dinner', '6:00 pm onwards'], lagna: ['dinner', '6:00 pm onwards'] }[e.id];
+    const DSLIP = DSL ? `<div class="dslip"><p class="g" lang="gu">ભોજન સમારંભ</p><p class="s">You are warmly invited to ${DSL[0]}</p><p class="t">${DSL[1]}</p></div>` : '';
     sec.insertAdjacentHTML('beforeend', `<div class="ch-in wrap">
       <header class="ch-hd">
         <p class="ch-no" aria-hidden="true">Day ${({I:'one',II:'two',III:'three',IV:'four'})[e.no]}<i></i></p>
         <h2 id="h-${e.id}"><span class="gu" lang="gu">${e.gu}</span><span class="en">${e.en}</span></h2>
         <p class="ch-lede">${e.lede}</p>
         <div class="when"><span class="dd">${e.dd}</span><span class="mm">${e.mm}<b>${e.wk}</b></span></div>
-        <p class="venue">${venue && venue.name ? venue.name : 'Venue details will be shared soon'}</p>
+        <p class="venue">${venue && venue.name ? 'Venue: ' + venue.name : 'Venue details will be shared soon'}</p>
         <div class="acts"><a class="btn line" href="${calUrl(e, venue)}" target="_blank" rel="noopener">${IC_CAL}Add to calendar</a>${venue && (venue.map || venue.name) ? `<a class="btn line" href="${venue.map || 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(venue.name)}" target="_blank" rel="noopener">${IC_PIN}Open in Maps</a>` : ''}</div>
-        ${extra}
+        
       </header>
       <div class="ch-body">
         <figure class="fig"><div class="swatch" style="--latimg:url(${latURL(e.pal)})"><div class="sw-in"><svg class="motif" viewBox="0 0 40 40" role="img" aria-label="${e.cap}">${motifSVG(grid, 7 + k)}</svg></div></div><figcaption>${e.cap}</figcaption></figure>
-        <h3 class="rt"><span class="gu" lang="gu">પરંપરા</span><span class="en">The rituals of the ${e.id === 'puja' ? 'morning' : e.id === 'lagna' ? 'wedding' : 'evening'}</span></h3>
+        ${DSLIP}<h3 class="rt"><span class="gu" lang="gu">પરંપરા</span><span class="en">The rituals of the ${e.id === 'puja' ? 'morning' : e.id === 'lagna' ? 'wedding' : 'evening'}</span></h3>
         <ol class="rites${e.seq ? ' seq' : ''}">${rites}</ol>
       </div>
     </div>`);
