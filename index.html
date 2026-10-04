@@ -508,6 +508,19 @@ footer .fam{font-size:clamp(1.3rem,5.6vw,1.9rem); line-height:1.5}
 .dslip .t{font-weight:600; font-size:1.02rem; letter-spacing:.08em; text-transform:uppercase; color:#7E0C21}
 @media (max-width:959px){.dslip{margin-inline:auto}}
 .ch-body .dslip{margin:26px auto 30px}
+/* ===== cover: one composition scaled for every device ===== */
+html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
+#cov{--u:300px; width:300px; height:auto; min-height:556px; padding:45px 27px 26px; box-sizing:border-box}
+#intro #cov,#intro.open #cov{transform:translate(-50%,-50%) scale(var(--s,1)); transform-origin:50% 50%}
+#intro{cursor:pointer}
+#cov .cg{width:calc(var(--u) * .45)}
+#cov .c1{font-size:calc(var(--u) * .04); margin-top:calc(var(--u) * .032)}
+#cov .c2{font-size:calc(var(--u) * .085)}
+#cov .c3{font-size:calc(var(--u) * .185)}
+#cov p.c3 i{font-size:.19em}
+#cov p.c4{font-size:calc(var(--u) * .046)}
+#cov #openBtn{font-size:calc(var(--u) * .058); white-space:nowrap; min-height:0; padding:.55em .6em; margin-bottom:calc(var(--u) * .02)}
+#cov .fam{font-size:calc(var(--u) * .043)}
 </style>
 </head>
 <body class="locked">
@@ -523,7 +536,7 @@ footer .fam{font-size:clamp(1.3rem,5.6vw,1.9rem); line-height:1.5}
     <svg class="orn" style="--o:3" viewBox="0 0 200 16" aria-hidden="true"><path d="M6 8H82M118 8H194" stroke="#E3B75A" stroke-width="1"/><path d="M100 1L107 8L100 15L93 8Z" fill="url(#zg)"/><circle cx="86" cy="8" r="2" fill="#E3B75A"/><circle cx="114" cy="8" r="2" fill="#E3B75A"/><circle cx="100" cy="8" r="2.2" fill="#C2102E"/></svg>
     <p class="c3" style="--o:4"><span class="foil">Ayushi</span><i>weds</i><span class="foil">Valay</span></p>
     <p class="c4" style="--o:5" aria-label="29 December 2026 to 1 January 2027"><b>29.12.2026</b><em>to</em><b>01.01.2027</b></p>
-    <button class="btn" style="--o:6" id="openBtn" type="button"><span>Open the invitation</span><b aria-hidden="true">&rarr;</b></button>
+    <button class="btn" style="--o:6" id="openBtn" type="button"><span>Tap anywhere to open</span></button>
     <p class="fam" style="--o:7" lang="gu">સ્વ. સોમદાસ ઈશ્વરદાસ<br>પટેલ પરિવાર (ડાંગરવા)</p>
   </div>
 </div>
@@ -1089,10 +1102,24 @@ function archPath(x0, x1, spring, head, bottom) {
 ['start','stop','chord','pop','init','bell'].forEach(k => { try { Snd[k] = () => {}; } catch (e) {} });
 const Intro = (() => {
   const el = $('#intro'); let done = false;
+  /* keep every line inside the arch on any phone, font or text-size setting */
+  let fitW = 300, fitH = 556, fitGap = 90;
+  function fitCover() {
+    const cv = $('#cov'); if (!cv) return;
+    /* the cover is laid out once at a fixed reference size, measured as the phone actually rendered it
+       (whatever its fonts, text size or zoom), then scaled as one picture to sit inside the arch */
+    const fam = cv.querySelector('.fam'); let w = cv.offsetWidth;
+    [...cv.children].forEach(n => { if (n !== fam) w = Math.max(w, n.scrollWidth + 54); });
+    const s = Math.min(fitW / w, fitH / cv.offsetHeight);
+    cv.style.setProperty('--s', s.toFixed(4)); cv.style.setProperty('--gap', (fitGap / s).toFixed(1) + 'px');
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if (!done) fitCover(); });
+  addEventListener('load', () => { if (!done) fitCover(); });
   function build() {
     const W = innerWidth, H = innerHeight, w = W / 2;
-    const aw = Math.round(Math.min(380, W - 124, (H - 250) * .54)), ah = Math.round(aw / .54), top = Math.round((H - ah) / 2), head = aw * .5, spring = top + head, bot = top + ah, cx = W / 2, x0 = cx - aw / 2, x1 = cx + aw / 2, m = 13, c = m + 6;
+    const aw = Math.round(Math.min(380, W * .72, H * .72 * .54)), ah = Math.round(aw / .54), top = Math.round((H - ah) / 2), head = aw * .5, spring = top + head, bot = top + ah, cx = W / 2, x0 = cx - aw / 2, x1 = cx + aw / 2, m = 13, c = m + 6;
     el.style.setProperty('--aw', aw + 'px'); el.style.setProperty('--ah', ah + 'px'); el.style.setProperty('--gy', f1(top + aw * .36) + 'px'); el.style.setProperty('--gap', Math.max(0, H - bot - c) + 'px'); $('#cov').classList.toggle('nofam', H - bot - c < 46);
+    fitW = aw; fitH = ah; fitGap = Math.max(0, H - bot - c); fitCover();
     const bud = (x, y, rot, k) => `<g class="fd b" transform="translate(${f1(x)} ${f1(y)}) rotate(${rot}) scale(${k})"><path d="M0 -2C-7 -9 -7 -19 0 -28C7 -19 7 -9 0 -2Z" fill="url(#zg)"/><path d="M-3 -3C-12 -6 -17 -13 -17 -21C-9 -18 -4 -12 -3 -3Z" fill="url(#zg)" fill-opacity=".85"/><path d="M3 -3C12 -6 17 -13 17 -21C9 -18 4 -12 3 -3Z" fill="url(#zg)" fill-opacity=".85"/><circle cy="-33" r="2.6" fill="url(#rub)" stroke="#F3D27E" stroke-width=".8"/></g>`;
     /* the whole cover is drawn once, in page coordinates; each door shows its own half */
     let art = `<path d="${archPath(x0, x1, spring, head, bot)}" fill="#FFFDF6" fill-opacity=".55"/>`;
@@ -1130,7 +1157,7 @@ const Intro = (() => {
   function init() {
     build();
     setTimeout(() => { el.classList.add('ready'); }, RM ? 0 : 700);
-    $('#openBtn').addEventListener('click', open); $('#cg').addEventListener('click', open);
+    el.addEventListener('click', open);
     let rt; addEventListener('resize', () => { if (done) return; clearTimeout(rt); rt = setTimeout(build, 200); });
   }
   return { init };
